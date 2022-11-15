@@ -1,0 +1,26 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl:  <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ex: <http://www.example.org/entity/>.
+@prefix ln: <http://concept-to-lexicon/>.
+@prefix lx: <http://linked-data-lexicon/>.
+
+ex:Organ rdf:type owl:Class, rdfs:Resource ;
+		 rdfs:comment "Description of the organ class" ;
+         rdfs:label "Organ"@en ;
+         rdfs:label "Organ in Dutch"@nl .
+ex:Organ ln:relatedTo lx:e0001 .
+
+ex:yearOfConstruction a owl:DataProperty .
+    rdfs:comment "Description of the organ class" ;
+    rdfs:label "Organ"@en ;
+	rdfs:range xsd:year . 
+
+ex:designer a owl:ObjectProperty .
+
+ex:thisOrgan001 a ex:Organ ;
+   ex:yearOfConstruction "1677"^^xsd:year ;
+   ex:designer ex:JohnSmith .
+   
+   

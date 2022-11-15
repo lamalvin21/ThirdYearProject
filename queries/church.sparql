@@ -1,0 +1,40 @@
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX fx:   <http://sparql.xyz/facade-x/ns/>
+PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
+PREFIX apf: <http://jena.apache.org/ARQ/property#>
+PREFIX organ: <http://w3id.org/polifonia/resource/organs/>
+PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
+
+CONSTRUCT {
+	?organ a oont:Organ ;
+		oont:church ?church ;
+} WHERE { 
+		{
+			SERVICE <x-sparql-anything:> {
+				BIND( CONCAT("./samples/Polifonia_-_organ_encyclopaedia_documents/", ?_file )  AS ?location) .
+				fx:properties fx:location ?location ; 
+				fx:archive.matches ".*\\.docx" .
+
+				[] a fx:root; rdf:_2/rdf:_1 ?m1 .
+				[] a fx:root; rdf:_3/rdf:_1 ?m2 .
+				
+				BIND ( IF (?m1 = "", ?m2, ?m1) AS ?match )
+				BIND ( replace( ?match, "@K2:", "") AS ?match1 ) .
+				BIND ( replace( ?match1, "\\[x2\\]", "") AS ?match2 ) .
+				BIND ( replace( ?match2, "\\[K2\\]", "") AS ?church ) .
+				BIND ( fx:String.toLowerCase( ?_id ) AS ?id)
+			}	
+		} 
+		.
+
+		BIND ( IRI ( CONCAT ( STR(organ:), ?id ) ) as ?organ ) .
+
+#		BIND ( ?val AS ?title )	
+#		?val2 apf:strSplit ( ?match3 "/" ) . 
+#		BIND (fx:serial() as ?check2)
+#		FILTER ( ?check2 = 2 ) .
+#		BIND ( ?val2 AS ?year )	
+
+	}
+

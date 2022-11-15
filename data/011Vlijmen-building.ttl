@@ -1,0 +1,10 @@
+@prefix apf:   <http://jena.apache.org/ARQ/property#> .
+@prefix fx:    <http://sparql.xyz/facade-x/ns/> .
+@prefix oont:  <http://w3id.org/polifonia/ontology/organs/> .
+@prefix organ: <http://w3id.org/polifonia/resource/organs/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xyz:   <http://sparql.xyz/facade-x/data/> .
+
+organ:011vlijmen  rdf:type        oont:Organ ;
+        oont:buildingDescription  "Neogotische kruisbasiliek met toren en koor met omgang, gebouwd in 1864-1866 naar ontwerp van H.J. van Tulder. Inwendig bundelpijlers, een nistriforium en kruisribgewelven in hout en stuc. Inrichting uit de bouwtijd. Preekstoel van onzekere herkomst in 17e-eeuwse trant." .

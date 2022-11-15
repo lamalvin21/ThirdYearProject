@@ -1,0 +1,535 @@
+@prefix fx:   <http://sparql.xyz/facade-x/ns/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xyz:  <http://sparql.xyz/facade-x/data/> .
+
+[ rdf:type  fx:root , xyz:Document ;
+  rdf:_1    [ rdf:type  xyz:Normal ;
+              rdf:_1    "[K1]'s-Gravenhage/1726[x1]"
+            ] ;
+  rdf:_10   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Deze orgelkas lijkt niet typerend voor Garrels. Bij hoofdwerk en rugwerk ziet men een eenvoudige vijfdelige opbouw met ronde torens en tweedelige tussenvelden. Wij lijken hier ver verwijderd te zijn van de rijk gelede fronten die voor de meeste orgels van Garrels karakteristiek zijn. In recente literatuur is dan ook geopperd dat Garrels met het ontwerpen van dit orgelfront niets te maken heeft gehad. Toch is het zeer goed mogelijk om deze orgelkas in de ontwikkeling van Garrels een plaats te geven. Het orgel in Anloo, het laatste dat Garrels bouwde voordat hij naar het westen kwam, had een borstwerk, een hoofdwerk en een aangehangen pedaal. Het had de voor de Schnitger-school typerende opbouw in de breedte. Zijn eerste orgel van betekenis in het westen, in de Hervormde Kerk in Maasland, kreeg een hoofdwerk en bovenwerk, dit laatste voor de Schnitger-school hoogst ongebruikelijk. Voor de vormgeving van dit voor hem ongewone orgeltype nam Garrels het vijfdelige Schnitger-front, model Uithuizen, tot uitgangspunt. De driedelige middenpartij van dit fronttype nam hij over, waarbij hij alleen de V-velden verving door velden met naar buiten aflopende labiumlijnen. Hij sloot dit geheel van boven af met een recht lijstwerk en plaatste daarop een bovenwerkfront, met ongedeelde tussenvelden. Het kreeg gebogen bovenlijsten, met lambrequins, hetgeen ook te vinden is in het orgel van de Oud-Katholieke Kerk in 's-Gravenhage. De bij het genoemde Schnitger-type behorende zijtorens nam Garrels ook over. Om de zijtorens in het nu door hem ontwikkelde concept voldoende gewicht te kunnen geven, kregen zij aanzienlijk meer volume. Zij wekken zelfs de indruk van typisch Noordwest-Duitse pedaaltorens, terwijl het orgel alleen een aangehangen pedaal bezat. Wat Garrels nog uit het noorden overnam waren de kappen en onderlijsten van de torens met hun facetten. De kronen op de torens horen overduidelijk in de Schnitger-school thuis. "
+            ] ;
+  rdf:_100  [ rdf:type  xyz:Normal ;
+              rdf:_1    "Holpijp"
+            ] ;
+  rdf:_101  [ rdf:type  xyz:Normal ;
+              rdf:_1    "Quintadena"
+            ] ;
+  rdf:_102  [ rdf:type  xyz:Normal ;
+              rdf:_1    "Prestant"
+            ] ;
+  rdf:_103  [ rdf:type  xyz:Normal ;
+              rdf:_1    "Roerfluijt"
+            ] ;
+  rdf:_104  [ rdf:type  xyz:Normal ;
+              rdf:_1    "Octaaf"
+            ] ;
+  rdf:_105  [ rdf:type  xyz:Normal ;
+              rdf:_1    "Sexqualter D"
+            ] ;
+  rdf:_106  [ rdf:type  xyz:Normal ;
+              rdf:_1    "Dulciaan B/D\n"
+            ] ;
+  rdf:_107  [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_108  [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_109  [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_11   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Garrels heeft er naar gestreefd de opbouw van het instrument in zijn front tot uitdrukking te brengen. Toen hij voor Den Haag een orgel met hoofdwerk en rugwerk moest bouwen van ongeveer dezelfde omvang als dat te Maasland, heeft hij wederom het 'werkprincipe' willen toepassen en daartoe het concept van Maasland aangepast. Wanneer men de gedeelde middentoren in dit orgelontwerp door een doorgaande toren vervangt en de gedeelde velden van het hoofdwerk door enkelvoudige velden, zoals het bovenwerk die bezit, dan resulteert dit in de opbouw van het orgel in de Haagse Oud-Katholieke kerk. De ontwerper hoefde slechts het aldus verkregen geheel in schaal te reduceren om een geschikt rugwerkfront te verkrijgen. Alles bijeen genomen, is het wel degelijk aannemelijk dat Garrels voor het Haagse orgel het basisontwerp leverde. "
+            ] ;
+  rdf:_110  [ rdf:type  xyz:Normal ;
+              rdf:_1    "8'"
+            ] ;
+  rdf:_111  [ rdf:type  xyz:Normal ;
+              rdf:_1    "8'"
+            ] ;
+  rdf:_112  [ rdf:type  xyz:Normal ;
+              rdf:_1    "4'"
+            ] ;
+  rdf:_113  [ rdf:type  xyz:Normal ;
+              rdf:_1    "4'"
+            ] ;
+  rdf:_114  [ rdf:type  xyz:Normal ;
+              rdf:_1    "2'"
+            ] ;
+  rdf:_115  [ rdf:type  xyz:Normal ;
+              rdf:_1    "2 st."
+            ] ;
+  rdf:_116  [ rdf:type  xyz:Normal ;
+              rdf:_1    "8'\n"
+            ] ;
+  rdf:_117  [ rdf:type  xyz:Normal ;
+              rdf:_1    "Pedaal"
+            ] ;
+  rdf:_118  [ rdf:type  xyz:Normal ;
+              rdf:_1    "1 stem"
+            ] ;
+  rdf:_119  [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_12   [ rdf:type  xyz:Normal ;
+              rdf:_1    "De kas kan zeer wel door iemand anders zijn vervaardigd. Met de decoratie had Garrels vermoedelijk weinig van doen. Deze is uitzonderlijk rijk. Men lette met name op de versiering van de kappen van de toren. Bij het rugpositief zijn daar maskers aangebracht, bij de zijtorens van het hoofdwerk ziet men non-figuratieve ornamenten gevormd uit S-voluten, palmetten en acanthusbladwerk. De modillons op de middentoren van het hoofdwerk zouden wellicht als reminiscentie aan de traditionele Groninger facetkappen, zoals nog in Maasland toegepast, kunnen worden opgevat. Het blinderingsnijwerk is een luchtig samenstel van C-voluten, bandwerk, acanthusranken en schelpmotieven. Het is duidelijk van een andere hand dan het massievere snijwerk van de borstwering, dat wel een vergelijkbare vormentaal laat zien. De bevolking van dit orgel is van een respectabele omvang: een wel zeer forse engel met boek en schrijfstift (?) zetelt op het rugwerk, terwijl op de hoeken van de onderkas van het hoofdwerk twee engel-hermen zijn aangebracht, die met een elegant gebaar hun gewaad schikken en met hun andere hand het orgel lijken te ondersteunen. Op de zijtorens van het hoofdwerk heeft een aantal muscierende putti een plaats gekregen, terwijl op de hoeken van deze torens cherubijnenkopjes zijn te zien. In de vleugelstukken ziet men fraaie voluten, zwanen en een grote reeks muziekinstrumenten. Wie de maker is van dit buitengewoon fraaie beeldhouwwerk, is niet bekend, al lijkt een onlangs naar voren gebrachte toeschrijving aan de in Rotterdam werkzame Alexander Pluskens nader onderzoek waard."
+            ] ;
+  rdf:_120  [ rdf:type  xyz:Normal ;
+              rdf:_1    "Subbas\n"
+            ] ;
+  rdf:_121  [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_122  [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_123  [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_124  [ rdf:type  xyz:Normal ;
+              rdf:_1    "16'"
+            ] ;
+  rdf:_125  [ rdf:type  xyz:Normal ;
+              rdf:_1    "[T1]Werktuiglijke registers"
+            ] ;
+  rdf:_126  [ rdf:type  xyz:Normal ;
+              rdf:_1    "koppelingen HW-RP, Ped-HW"
+            ] ;
+  rdf:_127  [ rdf:type  xyz:Normal ;
+              rdf:_1    "tremulant"
+            ] ;
+  rdf:_128  [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_129  [ rdf:type  xyz:Normal ;
+              rdf:_1    "Samenstelling vulstemmen"
+            ] ;
+  rdf:_13   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_130  [ rdf:type  xyz:Normal ;
+              rdf:_1    "Mixtuur HW\n"
+            ] ;
+  rdf:_131  [ rdf:type  xyz:Normal ;
+              rdf:_1    "[T4]C"
+            ] ;
+  rdf:_132  [ rdf:type  xyz:Normal ;
+              rdf:_1    "2"
+            ] ;
+  rdf:_133  [ rdf:type  xyz:Normal ;
+              rdf:_1    "1 1/3"
+            ] ;
+  rdf:_134  [ rdf:type  xyz:Normal ;
+              rdf:_1    "1"
+            ] ;
+  rdf:_135  [ rdf:type  xyz:Normal ;
+              rdf:_1    "2/3\n"
+            ] ;
+  rdf:_136  [ rdf:type  xyz:Normal ;
+              rdf:_1    "c1"
+            ] ;
+  rdf:_137  [ rdf:type  xyz:Normal ;
+              rdf:_1    "2"
+            ] ;
+  rdf:_138  [ rdf:type  xyz:Normal ;
+              rdf:_1    "1 1/3"
+            ] ;
+  rdf:_139  [ rdf:type  xyz:Normal ;
+              rdf:_1    "1"
+            ] ;
+  rdf:_14   [ rdf:type  xyz:Normal ;
+              rdf:_1    "[T3]Literatuur"
+            ] ;
+  rdf:_140  [ rdf:type  xyz:Normal ;
+              rdf:_1    "1"
+            ] ;
+  rdf:_141  [ rdf:type  xyz:Normal ;
+              rdf:_1    "2/3\n"
+            ] ;
+  rdf:_142  [ rdf:type  xyz:Normal ;
+              rdf:_1    "c2"
+            ] ;
+  rdf:_143  [ rdf:type  xyz:Normal ;
+              rdf:_1    "4"
+            ] ;
+  rdf:_144  [ rdf:type  xyz:Normal ;
+              rdf:_1    "2 2/3"
+            ] ;
+  rdf:_145  [ rdf:type  xyz:Normal ;
+              rdf:_1    "2"
+            ] ;
+  rdf:_146  [ rdf:type  xyz:Normal ;
+              rdf:_1    "2"
+            ] ;
+  rdf:_147  [ rdf:type  xyz:Normal ;
+              rdf:_1    "1 1/3"
+            ] ;
+  rdf:_148  [ rdf:type  xyz:Normal ;
+              rdf:_1    "1 1/3"
+            ] ;
+  rdf:_149  [ rdf:type  xyz:Normal ;
+              rdf:_1    "[T1]Cornet HW  "
+            ] ;
+  rdf:_15   [ rdf:type  xyz:Normal ;
+              rdf:_1    "W.R.C. Adriaensz (red.), Het Garrels-orgel in de Oud-Katholieke kerk in Den Haag. 's-Gravenhage, 1997."
+            ] ;
+  rdf:_150  [ rdf:type  xyz:Normal ;
+              rdf:_1    "[T4]c1 4 - 2 2/3 - 2 - 1 3/5"
+            ] ;
+  rdf:_151  [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_152  [ rdf:type  xyz:Normal ;
+              rdf:_1    "[T1]Sexqualter RP   "
+            ] ;
+  rdf:_153  [ rdf:type  xyz:Normal ;
+              rdf:_1    "[T4]c1 2 2/3 - 1 3/5"
+            ] ;
+  rdf:_154  [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_155  [ rdf:type  xyz:Normal ;
+              rdf:_1    "[T1]Toonhoogte"
+            ] ;
+  rdf:_156  [ rdf:type  xyz:Normal ;
+              rdf:_1    "a1 = 415 Hz"
+            ] ;
+  rdf:_157  [ rdf:type  xyz:Normal ;
+              rdf:_1    "Temperatuur"
+            ] ;
+  rdf:_158  [ rdf:type  xyz:Normal ;
+              rdf:_1    "Kirnberger III"
+            ] ;
+  rdf:_159  [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_16   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_160  [ rdf:type  xyz:Normal ;
+              rdf:_1    "Manuaalomvang"
+            ] ;
+  rdf:_161  [ rdf:type  xyz:Normal ;
+              rdf:_1    "C-c3"
+            ] ;
+  rdf:_162  [ rdf:type  xyz:Normal ;
+              rdf:_1    "Pedaalomvang"
+            ] ;
+  rdf:_163  [ rdf:type  xyz:Normal ;
+              rdf:_1    "C-d1"
+            ] ;
+  rdf:_164  [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_165  [ rdf:type  xyz:Normal ;
+              rdf:_1    "Windvoorziening"
+            ] ;
+  rdf:_166  [ rdf:type  xyz:Normal ;
+              rdf:_1    "twee spaanbalgen"
+            ] ;
+  rdf:_167  [ rdf:type  xyz:Normal ;
+              rdf:_1    "Winddruk"
+            ] ;
+  rdf:_168  [ rdf:type  xyz:Normal ;
+              rdf:_1    "74 mm"
+            ] ;
+  rdf:_169  [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_17   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Monumentnummer 17604"
+            ] ;
+  rdf:_170  [ rdf:type  xyz:Normal ;
+              rdf:_1    "Plaats klaviatuur"
+            ] ;
+  rdf:_171  [ rdf:type  xyz:Normal ;
+              rdf:_1    "voorzijde hoofdkas"
+            ] ;
+  rdf:_172  [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_173  [ rdf:type  xyz:Normal ;
+              rdf:_1    "[K2]Bijzonderheden[x2]"
+            ] ;
+  rdf:_174  [ rdf:type  xyz:Normal ;
+              rdf:_1    "[T1]De beide windladen zijn van Garrels. Windvoorziening, mechanieken en klaviatuur (naar Garrels-klavieren in Jacobikerk te Utrecht) werden in 1995 nieuw gemaakt."
+            ] ;
+  rdf:_175  [ rdf:type  xyz:Normal ;
+              rdf:_1    "De frontpijpen van HW en RP werden gereconstrueerd. De bijbehorende binnenpijpen zijn van Garrels. De Holpijp 8' (RP) bestaat uit vroeg-18e-eeuwse pijpen, niet in de factuur van Garrels maar door hem wel van inscripties voorzien."
+            ] ;
+  rdf:_176  [ rdf:type  xyz:Normal ;
+              rdf:_1    "De Quintfluit 3'(HW) en Dulciaan 8' (RP) zijn uit 1995. Alle overige registers zijn grotendeels van Garrels."
+            ] ;
+  rdf:_18   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Orgelnummer 536"
+            ] ;
+  rdf:_19   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_2    [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_20   [ rdf:type  xyz:Normal ;
+              rdf:_1    "[K2]Historische gegevens[x2]"
+            ] ;
+  rdf:_21   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_22   [ rdf:type  xyz:Normal ;
+              rdf:_1    "[T1]Bouwer"
+            ] ;
+  rdf:_23   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Rudolph Garrels"
+            ] ;
+  rdf:_24   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_25   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Jaar van oplevering"
+            ] ;
+  rdf:_26   [ rdf:type  xyz:Normal ;
+              rdf:_1    "1726"
+            ] ;
+  rdf:_27   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_28   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Rudolph Garrels 1734"
+            ] ;
+  rdf:_29   [ rdf:type  xyz:Normal ;
+              rdf:_1    ".\tRP vulstem (Scherp, Cimbel?) → Holpijp 8 (geen Garrels-factuur)"
+            ] ;
+  rdf:_3    [ rdf:type  xyz:Normal ;
+              rdf:_1    "[K2]Oud-Katholieke Kerk[x2]"
+            ] ;
+  rdf:_30   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_31   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Johan Caspar Friedrichs 1810-1825"
+            ] ;
+  rdf:_32   [ rdf:type  xyz:Normal ;
+              rdf:_1    ".\tgefaseerd technisch herstel (schoonmaak, winddicht maken van balgen, kanalen en laden)"
+            ] ;
+  rdf:_33   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_34   [ rdf:type  xyz:Normal ;
+              rdf:_1    "J. Bätz 1833"
+            ] ;
+  rdf:_35   [ rdf:type  xyz:Normal ;
+              rdf:_1    ".\tuitgebreid herstel van onbekende aard, dispositie niet gewijzigd"
+            ] ;
+  rdf:_36   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_37   [ rdf:type  xyz:Normal ;
+              rdf:_1    "J.F. Witte 1876"
+            ] ;
+  rdf:_38   [ rdf:type  xyz:Normal ;
+              rdf:_1    ".\tschoonmaak en reparatie"
+            ] ;
+  rdf:_39   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_4    [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_40   [ rdf:type  xyz:Normal ;
+              rdf:_1    "G. Spit 1911"
+            ] ;
+  rdf:_41   [ rdf:type  xyz:Normal ;
+              rdf:_1    ".\tbouw nieuw orgel (HW, BW, aangehangen Ped) in bestaande hoofdkas; kas RP blijft leeg"
+            ] ;
+  rdf:_42   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_43   [ rdf:type  xyz:Normal ;
+              rdf:_1    "J.C. Sanders 1914"
+            ] ;
+  rdf:_44   [ rdf:type  xyz:Normal ;
+              rdf:_1    ".\tlade en pijpwerk RP van Garrels geplaatst in het gebouw van de Nederlandse Protestanten Bond te Zeist; kas nieuw gemaakt"
+            ] ;
+  rdf:_45   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_46   [ rdf:type  xyz:Normal ;
+              rdf:_1    "J.C. Sanders 1918"
+            ] ;
+  rdf:_47   [ rdf:type  xyz:Normal ;
+              rdf:_1    ".\tlade en pijpwerk HW van Garrels geplaatst in Kleine of Mariakerk te Vollenhove achter Westfaals front (vermoedelijk van de familie Heilmann, ca 1780)"
+            ] ;
+  rdf:_48   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_49   [ rdf:type  xyz:Normal ;
+              rdf:_1    "K.B. Blank & Zn. 1960"
+            ] ;
+  rdf:_5    [ rdf:type  xyz:Normal ;
+              rdf:_1    "[T1]Geheel inpandige schuilkerk, gebouwd 1720-1722 door een onbekende bouwmeester. De inwendige afwerking herinnert echter aan Daniel Marot. Rijk gestuct plafond met voorstelling van de hemelvaart van Christus. Barok altaarretabel met altaarstuk van Christus op de berg Thabor door M. Terwesten. Preekstoel uit 1729 door J.B. Xavery, de bekroning iets later."
+            ] ;
+  rdf:_50   [ rdf:type  xyz:Normal ;
+              rdf:_1    ".\therstel orgel te Zeist"
+            ] ;
+  rdf:_51   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_52   [ rdf:type  xyz:Normal ;
+              rdf:_1    "1979"
+            ] ;
+  rdf:_53   [ rdf:type  xyz:Normal ;
+              rdf:_1    ".\toprichting \"Stichting reconstructie Garrels-orgel in de Oud-Katholieke Kerk te 's-Gravenhage\", die er in zou slagen het complete Garrels-binnenwerk uit Vollenhove en Zeist op te kopen"
+            ] ;
+  rdf:_54   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_55   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Flentrop Orgelbouw 1994"
+            ] ;
+  rdf:_56   [ rdf:type  xyz:Normal ;
+              rdf:_1    ".\trestauratie/reconstructie"
+            ] ;
+  rdf:_57   [ rdf:type  xyz:Normal ;
+              rdf:_1    ".\tnieuwe klaviatuur, registratuur, tractuur en windvoorziening"
+            ] ;
+  rdf:_58   [ rdf:type  xyz:Normal ;
+              rdf:_1    ".\tverdwenen registers (Prestant 8' (HW) en Prestant 4' (RP), beide front), Quintfluit 3' (HW) en Dulciaan 8' (RP) gereconstrueerd"
+            ] ;
+  rdf:_59   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_6    [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_60   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Flentrop Orgelbouw 1995"
+            ] ;
+  rdf:_61   [ rdf:type  xyz:Normal ;
+              rdf:_1    ".\tpedaallade aangebracht met voorlopig alleen een Subbas 16'; gereserveerd zijn de registers Octaaf 8', Bazuin 16', Trompet 8'"
+            ] ;
+  rdf:_62   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_63   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_64   [ rdf:type  xyz:Normal ;
+              rdf:_1    "[K2]Technische gegevens[x2]"
+            ] ;
+  rdf:_65   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_66   [ rdf:type  xyz:Normal ;
+              rdf:_1    "[T1]Werkindeling"
+            ] ;
+  rdf:_67   [ rdf:type  xyz:Normal ;
+              rdf:_1    "hoofdwerk, rugpositief, pedaal"
+            ] ;
+  rdf:_68   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_69   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Dispositie"
+            ] ;
+  rdf:_7    [ rdf:type  xyz:Normal ;
+              rdf:_1    "Kas: 1726"
+            ] ;
+  rdf:_70   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_71   [ rdf:type  xyz:Normal ;
+              rdf:_1    "[T4]Hoofdwerk (II)"
+            ] ;
+  rdf:_72   [ rdf:type  xyz:Normal ;
+              rdf:_1    "10 stemmen"
+            ] ;
+  rdf:_73   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_74   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Bordon B/D"
+            ] ;
+  rdf:_75   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Prestant"
+            ] ;
+  rdf:_76   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Holpijp"
+            ] ;
+  rdf:_77   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Octaaf"
+            ] ;
+  rdf:_78   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Fluijt"
+            ] ;
+  rdf:_79   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Quintfluijt"
+            ] ;
+  rdf:_8    [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_80   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Super Octaaf"
+            ] ;
+  rdf:_81   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Mixtuijr"
+            ] ;
+  rdf:_82   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Cornet D"
+            ] ;
+  rdf:_83   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Trompet B/D\n"
+            ] ;
+  rdf:_84   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_85   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_86   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ] ;
+  rdf:_87   [ rdf:type  xyz:Normal ;
+              rdf:_1    "16'"
+            ] ;
+  rdf:_88   [ rdf:type  xyz:Normal ;
+              rdf:_1    "8'"
+            ] ;
+  rdf:_89   [ rdf:type  xyz:Normal ;
+              rdf:_1    "8'"
+            ] ;
+  rdf:_9    [ rdf:type  xyz:Normal ;
+              rdf:_1    "[T2]Kunsthistorische aspecten"
+            ] ;
+  rdf:_90   [ rdf:type  xyz:Normal ;
+              rdf:_1    "4'"
+            ] ;
+  rdf:_91   [ rdf:type  xyz:Normal ;
+              rdf:_1    "4'"
+            ] ;
+  rdf:_92   [ rdf:type  xyz:Normal ;
+              rdf:_1    "3'"
+            ] ;
+  rdf:_93   [ rdf:type  xyz:Normal ;
+              rdf:_1    "2'"
+            ] ;
+  rdf:_94   [ rdf:type  xyz:Normal ;
+              rdf:_1    "4-6 st."
+            ] ;
+  rdf:_95   [ rdf:type  xyz:Normal ;
+              rdf:_1    "4 st."
+            ] ;
+  rdf:_96   [ rdf:type  xyz:Normal ;
+              rdf:_1    "8'\n"
+            ] ;
+  rdf:_97   [ rdf:type  xyz:Normal ;
+              rdf:_1    "Rugpositief (I)"
+            ] ;
+  rdf:_98   [ rdf:type  xyz:Normal ;
+              rdf:_1    "7 stemmen"
+            ] ;
+  rdf:_99   [ rdf:type  xyz:Normal ;
+              rdf:_1    ""
+            ]
+] .

@@ -1,0 +1,273 @@
+@prefix fx:   <http://sparql.xyz/facade-x/ns/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xyz:  <http://sparql.xyz/facade-x/data/> .
+
+[ rdf:type  xyz:Document , fx:root ;
+  rdf:_1    [ rdf:type  xyz:Heading1 ;
+              rdf:_1    "Vlijmen / 1878"
+            ] ;
+  rdf:_10   [ rdf:type  xyz:T2Kunst ;
+              rdf:_1    "De middentoren is vlak en eindigt in een wimberg met bladwerk en een medaillon met Christuskop. De velden ter weerszijden van de torenachtige velden boven de beelden zijn ook van wimbergen voorzien. De zijtorens zijn rond en worden bekroond door spitsen met drie wimbergen. Boven de vlakke middentoren een aedicula met een zittend beeld van een harp spelende David."
+            ] ;
+  rdf:_11   [ rdf:type  xyz:T2Kunst ;
+              rdf:_1    "Tegen de borstwering is een zittend beeld aangebracht van Caecilia die haar orgeltje is kwijtgeraakt, wat goed weergeeft hoe het tegenwoordig met deze orgelkas is gesteld; zij is namelijk leeg."
+            ] ;
+  rdf:_12   [ rdf:type  xyz:T3Lit ;
+              rdf:_1    ""
+            ] ;
+  rdf:_13   [ rdf:type  xyz:T3Lit ;
+              rdf:_1    "Literatuur"
+            ] ;
+  rdf:_14   [ rdf:type  xyz:T3Lit ;
+              rdf:_1    "Frans Jespers, Repertorium van orgels en orgelmakers in Noord-Brabant tot omstreeks 1900. ‘s-Hertogenbosch, 1983, 316-317."
+            ] ;
+  rdf:_15   [ rdf:type  xyz:T3Lit ;
+              rdf:_1    ""
+            ] ;
+  rdf:_16   [ rdf:type  xyz:T3Lit ;
+              rdf:_1    "Niet gepubliceerde bron"
+            ] ;
+  rdf:_17   [ rdf:type  xyz:T3Lit ;
+              rdf:_1    "Archief Gebr. Vermeulen."
+            ] ;
+  rdf:_18   [ rdf:type  xyz:T3Lit ;
+              rdf:_1    ""
+            ] ;
+  rdf:_19   [ rdf:type  xyz:T3Lit ;
+              rdf:_1    "Monumentnummer 37871"
+            ] ;
+  rdf:_2    [ rdf:type  xyz:Heading2 ;
+              rdf:_1    "R.K. St-Jan"
+            ] ;
+  rdf:_20   [ rdf:type  xyz:T3Lit ;
+              rdf:_1    "Orgelnummer 1570"
+            ] ;
+  rdf:_21   [ rdf:type  xyz:T1 ;
+              rdf:_1    ""
+            ] ;
+  rdf:_22   [ rdf:type  xyz:Heading2 ;
+              rdf:_1    "Historische gegevens"
+            ] ;
+  rdf:_23   [ rdf:type  xyz:T1 ;
+              rdf:_1    ""
+            ] ;
+  rdf:_24   [ rdf:type  xyz:T1 ;
+              rdf:_1    "Bouwers"
+            ] ;
+  rdf:_25   [ rdf:type  xyz:T1 ;
+              rdf:_1    "1. Gebr. Franssen"
+            ] ;
+  rdf:_26   [ rdf:type  xyz:T1 ;
+              rdf:_1    "2. Gebr. Vermeulen"
+            ] ;
+  rdf:_27   [ rdf:type  xyz:T1 ;
+              rdf:_1    "3. Gebr. Vermeulen"
+            ] ;
+  rdf:_28   [ rdf:type  xyz:T1 ;
+              rdf:_1    ""
+            ] ;
+  rdf:_29   [ rdf:type  xyz:T1 ;
+              rdf:_1    "Jaren van oplevering"
+            ] ;
+  rdf:_3    [ rdf:type  xyz:T1 ;
+              rdf:_1    ""
+            ] ;
+  rdf:_30   [ rdf:type  xyz:T1 ;
+              rdf:_1    "1. 1878"
+            ] ;
+  rdf:_31   [ rdf:type  xyz:T1 ;
+              rdf:_1    "2. 1948"
+            ] ;
+  rdf:_32   [ rdf:type  xyz:T1 ;
+              rdf:_1    "3. 1952"
+            ] ;
+  rdf:_33   [ rdf:type  xyz:T1 ;
+              rdf:_1    ""
+            ] ;
+  rdf:_34   [ rdf:type  xyz:T1 ;
+              rdf:_1    "Onbekend(e) moment(en)"
+            ] ;
+  rdf:_35   [ rdf:type  xyz:T1 ;
+              rdf:_1    ".\torgel gewijzigd"
+            ] ;
+  rdf:_36   [ rdf:type  xyz:T1 ;
+              rdf:_1    ".\tnieuwe pneumatische kegellade Man II"
+            ] ;
+  rdf:_37   [ rdf:type  xyz:T1 ;
+              rdf:_1    ""
+            ] ;
+  rdf:_38   [ rdf:type  xyz:T1 ;
+              rdf:_1    "Dispositie 1942 volgens archief Gebr. Vermeulen"
+            ] ;
+  rdf:_39   [ rdf:type  xyz:T1 ;
+              rdf:_1    ""
+            ] ;
+  rdf:_4    [ rdf:type  xyz:Normal ;
+              rdf:_1    "Neogotische kruisbasiliek met toren en koor met omgang, gebouwd in 1864-1866 naar ontwerp van H.J. van Tulder. Inwendig bundelpijlers, een nistriforium en kruisribgewelven in hout en stuc. Inrichting uit de bouwtijd. Preekstoel van onzekere herkomst in 17e-eeuwse trant."
+            ] ;
+  rdf:_40   [ rdf:type  xyz:T1 ;
+              rdf:_1    "manuaalkoppel, pedaal + manuaal I, pedaal + manuaal II"
+            ] ;
+  rdf:_41   [ rdf:type  xyz:T1 ;
+              rdf:_1    ""
+            ] ;
+  rdf:_42   [ rdf:type  xyz:T1 ;
+              rdf:_1    "1944"
+            ] ;
+  rdf:_43   [ rdf:type  xyz:T1 ;
+              rdf:_1    ".\torgel door oorlogsgeweld beschadigd"
+            ] ;
+  rdf:_44   [ rdf:type  xyz:T1 ;
+              rdf:_1    ""
+            ] ;
+  rdf:_45   [ rdf:type  xyz:T1 ;
+              rdf:_1    "Gebr. Vermeulen 1948"
+            ] ;
+  rdf:_46   [ rdf:type  xyz:T1 ;
+              rdf:_1    "bouw éénklaviers noodorgel met pedaal in bestaande kas met gebruikmaking bestaande windlade, balg en pijpwerk van oude Manuaal II"
+            ] ;
+  rdf:_47   [ rdf:type  xyz:T1 ;
+              rdf:_1    ""
+            ] ;
+  rdf:_48   [ rdf:type  xyz:T1 ;
+              rdf:_1    "Dispositie 1949 "
+            ] ;
+  rdf:_49   [ rdf:type  xyz:T4dispositie ;
+              rdf:_1    ""
+            ] ;
+  rdf:_5    [ rdf:type  xyz:T1 ;
+              rdf:_1    ""
+            ] ;
+  rdf:_50   [ rdf:type  xyz:T4dispositie ;
+              rdf:_1    "koppeling Ped-Man"
+            ] ;
+  rdf:_51   [ rdf:type  xyz:T4dispositie ;
+              rdf:_1    "vaste combinaties P  MF  Tutti  Oplosser"
+            ] ;
+  rdf:_52   [ rdf:type  xyz:T1 ;
+              rdf:_1    ""
+            ] ;
+  rdf:_53   [ rdf:type  xyz:T1 ;
+              rdf:_1    "Gebr. Vermeulen 1952"
+            ] ;
+  rdf:_54   [ rdf:type  xyz:T1 ;
+              rdf:_1    ".\torgel verbouwd en uitgebreid met tweede manuaal"
+            ] ;
+  rdf:_55   [ rdf:type  xyz:T1 ;
+              rdf:_1    ".\torgelkas naar achteren geplaatst; zwelkast voor man II aangebracht "
+            ] ;
+  rdf:_56   [ rdf:type  xyz:T1 ;
+              rdf:_1    ".\ttwee nieuwe regulateurs geplaatst"
+            ] ;
+  rdf:_57   [ rdf:type  xyz:T1 ;
+              rdf:_1    ".\tnieuwe windladen voor Man I en Ped; oude lade voor Man II gebruikt"
+            ] ;
+  rdf:_58   [ rdf:type  xyz:T1 ;
+              rdf:_1    ".\tnieuwe speeltafel en tractuur"
+            ] ;
+  rdf:_59   [ rdf:type  xyz:T1 ;
+              rdf:_1    ".\tdispositiewijzigingen:"
+            ] ;
+  rdf:_6    [ rdf:type  xyz:T1 ;
+              rdf:_1    "Kas: 1878"
+            ] ;
+  rdf:_60   [ rdf:type  xyz:T1 ;
+              rdf:_1    "Man II - Voix Céleste 8', + Terts 1 3/5'"
+            ] ;
+  rdf:_61   [ rdf:type  xyz:T1 ;
+              rdf:_1    "Ped + Octaafbas 8', + Gedektbas 8' (tr), + Koraal 4' (tr)"
+            ] ;
+  rdf:_62   [ rdf:type  xyz:T1 ;
+              rdf:_1    ""
+            ] ;
+  rdf:_63   [ rdf:type  xyz:T1 ;
+              rdf:_1    "Dispositie 1952 "
+            ] ;
+  rdf:_64   [ rdf:type  xyz:T4dispositie ;
+              rdf:_1    ""
+            ] ;
+  rdf:_65   [ rdf:type  xyz:T4dispositie ;
+              rdf:_1    "* gereserveerd"
+            ] ;
+  rdf:_66   [ rdf:type  xyz:T4dispositie ;
+              rdf:_1    ""
+            ] ;
+  rdf:_67   [ rdf:type  xyz:T4dispositie ;
+              rdf:_1    "koppelingen I-II, I-II 16', P-I, P-II"
+            ] ;
+  rdf:_68   [ rdf:type  xyz:T4dispositie ;
+              rdf:_1    "vaste combinaties P - MF - Tutti"
+            ] ;
+  rdf:_69   [ rdf:type  xyz:T4dispositie ;
+              rdf:_1    "vrije combinatie"
+            ] ;
+  rdf:_7    [ rdf:type  xyz:Heading2 ;
+              rdf:_1    "Kunsthistorische aspecten"
+            ] ;
+  rdf:_70   [ rdf:type  xyz:T4dispositie ;
+              rdf:_1    "automatische pedaalomschakeling"
+            ] ;
+  rdf:_71   [ rdf:type  xyz:T4dispositie ;
+              rdf:_1    "tongwerk af"
+            ] ;
+  rdf:_72   [ rdf:type  xyz:T1 ;
+              rdf:_1    ""
+            ] ;
+  rdf:_73   [ rdf:type  xyz:T1 ;
+              rdf:_1    "Gebr. Vermeulen 1983"
+            ] ;
+  rdf:_74   [ rdf:type  xyz:T1 ;
+              rdf:_1    ".\tschoonmaak en herstel"
+            ] ;
+  rdf:_75   [ rdf:type  xyz:T1 ;
+              rdf:_1    ".\tspeeltafel naar priesterkoor verplaatst"
+            ] ;
+  rdf:_76   [ rdf:type  xyz:T1 ;
+              rdf:_1    ""
+            ] ;
+  rdf:_77   [ rdf:type  xyz:T1 ;
+              rdf:_1    "2001"
+            ] ;
+  rdf:_78   [ rdf:type  xyz:T1 ;
+              rdf:_1    ".\tbinnenwerk gesloopt"
+            ] ;
+  rdf:_79   [ rdf:type  xyz:T1 ;
+              rdf:_1    ""
+            ] ;
+  rdf:_8    [ rdf:type  xyz:T2Kunst ;
+              rdf:_1    "Gezien de grote overeenkomst met het door de architect Lambert Hezenmans uit 's-Hertogenbosch ontworpen en door het Bossche atelier Goossens vervaardigde orgelfront in H. Mariakerk te Oss, mag men aannemen dat het orgelfront in Vlijmen dezelfde oorsprong heeft."
+            ] ;
+  rdf:_80   [ rdf:type  xyz:Heading2 ;
+              rdf:_1    "Technische gegevens"
+            ] ;
+  rdf:_81   [ rdf:type  xyz:T1 ;
+              rdf:_1    ""
+            ] ;
+  rdf:_82   [ rdf:type  xyz:T1 ;
+              rdf:_1    "Niet van toepassing."
+            ] ;
+  rdf:_83   [ rdf:_1  [ rdf:_1  "Manuaal IPrestantBourdonPrestantRoerfluitVioloncelFl. harm.PrestantRoerfluitSalicetQuintOctaafCornet DTrompet" ;
+                        rdf:_2  "16'16'8'8'8'8'4'4'4'2 2/3'2'3 st.8'" ;
+                        rdf:_3  "Manuaal II (in zwelkast)HolpijpSalicionaalViola d. GambaDolcinaVox celesteFl. harm.ViolinePiccoloHobo" ;
+                        rdf:_4  "8'8'8'8'8'4'4'2'8'"
+                      ]
+            ] ;
+  rdf:_84   [ rdf:_1  [ rdf:_1  "ManuaalPrestantHolpijpSalicionaalVoix CélestePrestantFluit harmoniqueQuintPiccoloBasson- Hobo" ;
+                        rdf:_2  "8'8'8'8'4'4'2 2/3'2'8'" ;
+                        rdf:_3  "PedaalSubbas " ;
+                        rdf:_4  "16'"
+                      ]
+            ] ;
+  rdf:_85   [ rdf:_1  [ rdf:_1  "Manuaal IPrestantRoerfluitOctaafFluit gedektQuint*OctaafMixtuurTrompet*" ;
+                        rdf:_2  "8'8'4'4'2 2/3'2'4-6 st.8'" ;
+                        rdf:_3  "Manuaal IIPrestantHolpijpSalicionaalPrestantDwarsfluitQuintPiccoloTertsBasson- Hobo" ;
+                        rdf:_4  "8'8'8'4'4'2 2/3'2'1 3/5'8'" ;
+                        rdf:_5  "PedaalSubbas OctaafbasGedektbasKoraal" ;
+                        rdf:_6  "16'8'8' tr4' tr"
+                      ]
+            ] ;
+  rdf:_9    [ rdf:type  xyz:T2Kunst ;
+              rdf:_1    "Men kan dit front, evenals dat te Oss, opvatten als een in gotische vormen vertaalde versie van het model dat Goossens eerder toepaste in barokke vormen, onder meer voor de orgelkassen in Meijel (1864, deel 1858-1865, 319-321) en St.-Odiliënberg (1868, deel 1865-1872, 202-204). Beslissend voor deze interpretatie is de aanwezigheid van beelden in het benedendeel van de kas geflankeerd door smalle pijpvelden. Beelden en pijpvelden worden omvat door drie bogen met wimbergen. Boven de beelden is een smal pijpveld aangebracht van enigszins torenachtig karakter, bekroond door een zware pinakel. Het wordt geflankeerd door eveneens smalle pijpvelden die lager aanzetten. Op deze manier geplaatste beelden zijn bij genoemde fronten ook te vinden. Een verschil daarmee is dat in Vlijmen de flankerende pijpen over twee etages zijn verdeeld en dat zij in de bovenetage groter in aantal zijn."
+            ]
+] .

@@ -1,0 +1,26 @@
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX fx:   <http://sparql.xyz/facade-x/ns/>
+PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX apf: <http://jena.apache.org/ARQ/property#>
+PREFIX organ: <http://w3id.org/polifonia/resource/organs/>
+PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
+
+
+CONSTRUCT {
+	?class a owl:Class .
+	?property a owl:DatatypeProperty .
+	?property rdfs:domain ?class .
+	?property rdfs:comment ?type 
+} WHERE {
+#SELECT ?field ?class ?type ?other WHERE {
+ SERVICE <x-sparql-anything:> {
+ 	fx:properties fx:location "./ontology/database-schema.csv" ; fx:csv.headers "false" .
+	[] a fx:root ;
+	fx:anySlot [  rdf:_1 ?table ; rdf:_2 ?field ; rdf:_3 ?type ]
+ }
+ 
+ BIND ( fx:entity ( oont:, replace(fx:WordUtils.capitalize(replace( ?table, "_"," "))," ","")) as ?class ) .
+ BIND ( fx:entity ( oont:, ?table, ".", fx:WordUtils.uncapitalize( replace( fx:WordUtils.capitalize( replace( ?field, "_"," ") )," ","") ) ) as ?property ) . 
+}

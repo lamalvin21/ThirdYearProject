@@ -1,0 +1,52 @@
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX fx:   <http://sparql.xyz/facade-x/ns/>
+PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
+PREFIX apf: <http://jena.apache.org/ARQ/property#>
+PREFIX organ: <http://w3id.org/polifonia/resource/organs/>
+PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
+
+CONSTRUCT {
+	?organ a oont:Organ ;
+		oont:buildingDescription ?description ;
+} WHERE { 
+#SELECT ?m1 ?description WHERE {		
+		{
+			SERVICE <x-sparql-anything:> {
+				BIND( CONCAT("./samples/Polifonia_-_organ_encyclopaedia_documents/", ?_file )  AS ?location) .
+				fx:properties fx:location ?location ; 
+				fx:archive.matches ".*\\.docx" .
+				
+				{
+					# ##002GRAVH -- [T1] 				
+					 [] a fx:root ; ?li1 [ rdf:_1 ?m1 ].
+					 FILTER ( fx:before(?li1, rdf:_7) && fx:String.startsWith(?m1, "[T1]") ) .
+					} UNION {
+				     # ##001MIDDE -- <I>
+					 [] a fx:root ; ?li1 [ rdf:_1 ?m1 ] .
+					 FILTER ( fx:String.startsWith(?m1, "<I>") ) .
+					} UNION {
+					 # ##003HAREN , 006Lellens , 011Vlijmen
+					 [] a fx:root ; ?li1 [ rdf:_1 ?m1 ].
+					 FILTER ( STRLEN(?m1) > 40 && fx:before(?li1, rdf:_6)) .
+					} 
+ 			
+				BIND ( replace( ?m1, "\\[T1\\]", "") AS ?m2 ) .
+				BIND ( replace( ?m2, "<I>", "") AS ?m3 ) .
+				FILTER (fx:String.trim(?m3) != "") .
+				BIND (?m3 AS ?description ) .
+				BIND ( fx:String.toLowerCase( ?_id ) AS ?id)
+			}	
+		} 
+		.
+
+		BIND ( IRI ( CONCAT ( STR(organ:), ?id ) ) as ?organ ) .
+
+#		BIND ( ?val AS ?title )	
+#		?val2 apf:strSplit ( ?match3 "/" ) . 
+#		BIND (fx:serial() as ?check2)
+#		FILTER ( ?check2 = 2 ) .
+#		BIND ( ?val2 AS ?year )	
+
+	}
+

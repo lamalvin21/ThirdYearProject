@@ -1,0 +1,10 @@
+@prefix apf:   <http://jena.apache.org/ARQ/property#> .
+@prefix fx:    <http://sparql.xyz/facade-x/ns/> .
+@prefix oont:  <http://w3id.org/polifonia/ontology/organs/> .
+@prefix organ: <http://w3id.org/polifonia/resource/organs/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xyz:   <http://sparql.xyz/facade-x/data/> .
+
+organ:001midde  rdf:type          oont:Organ ;
+        oont:buildingDescription  "Oorspronkelijk kanunnikenkoor van de voormalige Praemonstratenser Abdij. Gebouwd in ca 1300. Huidige netgewelven aangebracht na brand in 1568. Aan zuidzijde achthoekige toren met hoge torenkapel. Preekstoel afkomstig uit Zuiderkerk, Amsterdam." .
