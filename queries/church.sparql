@@ -15,7 +15,7 @@ CONSTRUCT {
 				BIND( CONCAT("./samples/Polifonia_-_organ_encyclopaedia_documents/", ?_file )  AS ?location) .
 				fx:properties fx:location ?location ; 
 				fx:archive.matches ".*\\.docx" .
-
+				
 				[] a fx:root; rdf:_2/rdf:_1 ?m1 .
 				[] a fx:root; rdf:_3/rdf:_1 ?m2 .
 				

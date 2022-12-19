@@ -37,6 +37,7 @@ def loadOrganData(sets = 'all'):
             'texts_hist',
             'texts_fulltexts',
             'texts_tech',
+            'texts_kunst',
             'texts_bijzonderheden',
             'texts_offsets'
         ]
