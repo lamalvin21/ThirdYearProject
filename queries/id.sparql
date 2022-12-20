@@ -15,10 +15,12 @@ CONSTRUCT {
 } 
 WHERE  
 		{
-			SERVICE <x-sparql-anything:./output/organlexicon.xlsx> {
+			SERVICE <x-sparql-anything:file:./output/organlexicon.xlsx> {
                 [] a fx:root;
                 rdf:_1 ?id;
                 rdf:_2 ?name.
 			}	
 		} 
 		
+
+	
