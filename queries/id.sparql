@@ -1,0 +1,24 @@
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX fx:   <http://sparql.xyz/facade-x/ns/>
+PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
+PREFIX apf: <http://jena.apache.org/ARQ/property#>
+PREFIX organ: <http://w3id.org/polifonia/resource/organs/>
+PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1>
+
+CONSTRUCT {
+    #ontology
+     ?word a foaf:name.
+      ?word foaf:id ?id.
+      ?word foaf:name ?name.
+} 
+WHERE  
+		{
+			SERVICE <x-sparql-anything:./output/organlexicon.xlsx> {
+                [] a fx:root;
+                rdf:_1 ?id;
+                rdf:_2 ?name.
+			}	
+		} 
+		
