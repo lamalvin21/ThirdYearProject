@@ -9,16 +9,29 @@ PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
 
 CONSTRUCT
   {
-    ?s ?p ?o .
+	?organ a oont:Organ ;
+		oont:builder ?builder ;
+		oont:consolelocation ?originallocation ;
+    # ?s ?p ?o .
   }
 WHERE
   { SERVICE <x-sparql-anything:file:./output/history_base.json>
     { 
 		fx:properties
-				fx:json.path "$..*" .
+				# fx:json.path "$..*" .
                 # fx:json.path  "$[?(@.builder==\"Peter Gerritsz\")]" .
-				# fx:json.path "$..Part01_001MIDDE..builder" .
+				fx:json.path.1 "$..Part01_001MIDDE..builder" ;
+				fx:json.path.2 "$..Part01_001MIDDE..originallocation" .
+				# fx:json.path.3 "$..Part01_001MIDDE..year" .
 				
-		?s  ?p  ?o 
-	}
+			[] a fx:root; 
+			rdf:_1 ?builder ;
+			rdf:_2 ?originallocation .
+			# rdf:_3 ?year .
+		# BIND (?builder AS ?s ) .
+		BIND ("?organ" AS ?organ) .
+		# BIND (?originallocation AS ?o) .
+
+		# ?s  ?p  ?o 
+	} 
   }
