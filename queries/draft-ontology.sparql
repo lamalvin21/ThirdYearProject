@@ -7,20 +7,18 @@ PREFIX apf: <http://jena.apache.org/ARQ/property#>
 PREFIX organ: <http://w3id.org/polifonia/resource/organs/>
 PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
 
-
-CONSTRUCT {
-	?class a owl:Class .
-	?property a owl:DatatypeProperty .
-	?property rdfs:domain ?class .
-	?property rdfs:comment ?type 
-} WHERE {
-#SELECT ?field ?class ?type ?other WHERE {
- SERVICE <x-sparql-anything:> {
- 	fx:properties fx:location "./ontology/database-schema.csv" ; fx:csv.headers "false" .
-	[] a fx:root ;
-	fx:anySlot [  rdf:_1 ?table ; rdf:_2 ?field ; rdf:_3 ?type ]
- }
- 
- BIND ( fx:entity ( oont:, replace(fx:WordUtils.capitalize(replace( ?table, "_"," "))," ","")) as ?class ) .
- BIND ( fx:entity ( oont:, ?table, ".", fx:WordUtils.uncapitalize( replace( fx:WordUtils.capitalize( replace( ?field, "_"," ") )," ","") ) ) as ?property ) . 
-}
+CONSTRUCT
+  {
+    ?s ?p ?o .
+  }
+WHERE
+  { SERVICE <x-sparql-anything:file:./output/history_base.json>
+    { 
+		fx:properties
+				fx:json.path "$..*" .
+                # fx:json.path  "$[?(@.builder==\"Peter Gerritsz\")]" .
+				# fx:json.path "$..Part01_001MIDDE..builder" .
+				
+		?s  ?p  ?o 
+	}
+  }
