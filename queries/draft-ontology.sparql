@@ -18,6 +18,12 @@ CONSTRUCT
 		oont:name ?organName ;
 		oont:organNumber ?organNumber ;
 		oont:state ?state ;
+		oont:systemPlayingAids ?systemPlayingAids ;
+		oont:pitch ?pitch ;
+		oont:range1 ?range ;
+		oont:temperature ?temperature ;
+		oont:windPressure ?windPressure ;
+		oont:windSystem ?windSystem ;
   }
 WHERE
   { SERVICE <x-sparql-anything:file:./output/history_base.json>
@@ -28,13 +34,15 @@ WHERE
 
 		fx:properties
 				fx:json.path.1 ?organBuilder ;
-				fx:json.path.2 "$..Part01_001MIDDE..originallocation" ; # doesnt work for the ?organOriginalLocation
-				fx:json.path.3 "$..Part01_001MIDDE..year" . #doesnt work for ?organDob
+				fx:json.path.2 "$..Part01_001MIDDE..originallocation" ; #doesnt work for the ?organOriginalLocation
+				fx:json.path.3 "$..Part01_001MIDDE..year" ; #doesnt work for ?organDob
+				. 
 				
 			[] a fx:root; 
 			rdf:_1 ?builder ;
 			rdf:_2 ?originallocation ;
-			rdf:_3 ?dateOfBirth .
+			rdf:_3 ?dateOfBirth ; 
+			.
 
 		BIND (?_organ AS ?organ) .
 	} 
@@ -56,5 +64,24 @@ WHERE
 			rdf:_5 ?state ;
 			.
 	} 
-
+	SERVICE <x-sparql-anything:file:./output/tech.json>
+    { 
+		fx:properties
+				fx:json.path.1 "$..Part01_001MIDDE..aids" ;
+				fx:json.path.2 "$..Part01_001MIDDE..pitch" ;
+				fx:json.path.3 "$..Part01_001MIDDE..range1" ; 
+				fx:json.path.4 "$..Part01_001MIDDE..temperature" ; 
+				fx:json.path.5 "$..Part01_001MIDDE..windPres" ; 
+				fx:json.path.6 "$..Part01_001MIDDE..windSys" ; 
+				.
+				
+			[] a fx:root; 
+			rdf:_1 ?systemPlayingAids;
+			rdf:_2 ?pitch ; 
+			rdf:_3 ?range ;
+			rdf:_4 ?temperature ;
+			rdf:_5 ?windPressure ;
+			rdf:_6 ?windSystem ;
+			.
+	} 
   }
