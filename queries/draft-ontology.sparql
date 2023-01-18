@@ -13,6 +13,11 @@ CONSTRUCT
 		oont:builder ?builder ;
 		oont:consolelocation ?originallocation ;
 		oont:dateOfBirth ?dateOfBirth ;
+		oont:monument ?building ;
+		oont:monumentNumber ?monumentNumber ;
+		oont:name ?organName ;
+		oont:organNumber ?organNumber ;
+		oont:state ?state ;
   }
 WHERE
   { SERVICE <x-sparql-anything:file:./output/history_base.json>
@@ -33,4 +38,23 @@ WHERE
 
 		BIND (?_organ AS ?organ) .
 	} 
+	SERVICE <x-sparql-anything:file:./output/base.json>
+    { 
+		fx:properties
+				fx:json.path.1 "$..Part01_001MIDDE..building" ;
+				fx:json.path.2 "$..Part01_001MIDDE..monumentnumber" ;
+				fx:json.path.3 "$..Part01_001MIDDE..name" ; 
+				fx:json.path.4 "$..Part01_001MIDDE..organnumber" ; 
+				fx:json.path.5 "$..Part01_001MIDDE..place" ; 
+				.
+				
+			[] a fx:root; 
+			rdf:_1 ?building ;
+			rdf:_2 ?monumentNumber ;
+			rdf:_3 ?organName ; 
+			rdf:_4 ?organNumber ;
+			rdf:_5 ?state ;
+			.
+	} 
+
   }
