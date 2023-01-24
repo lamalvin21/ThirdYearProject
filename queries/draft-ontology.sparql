@@ -7,6 +7,8 @@ PREFIX apf: <http://jena.apache.org/ARQ/property#>
 PREFIX organ: <http://w3id.org/polifonia/resource/organs/>
 PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
 
+# evaluate using size of files, no. service calls, files queried. 
+
 CONSTRUCT
   {
 	?organ a oont:Organ ;
