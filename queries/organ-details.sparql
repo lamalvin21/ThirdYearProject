@@ -30,14 +30,14 @@ CONSTRUCT
 WHERE
   { SERVICE <x-sparql-anything:file:./output/history_base.json>
     { 
-		BIND(CONCAT("$..", ?_organ, "..builder") AS ?organBuilder) .
-		BIND(CONCAT("$..", ?_organ, "..originallocation") AS ?organOriginalLocation) .
-		BIND(CONCAT("$..", ?_organ, "..year") AS ?organDob) .
+		BIND(CONCAT("$.", ?_organ, ".builder") AS ?organBuilder) .
+		BIND(CONCAT("$.", ?_organ, ".originallocation") AS ?organOriginalLocation) .
+		BIND(CONCAT("$.", ?_organ, ".year") AS ?organDob) .
 
 		fx:properties
 				fx:json.path.1 ?organBuilder ;
-				fx:json.path.2 "$..Part01_001MIDDE..originallocation" ; #doesnt work for the ?organOriginalLocation
-				fx:json.path.3 "$..Part01_001MIDDE..year" ; #doesnt work for ?organDob
+				fx:json.path.2 "$.Part01_001MIDDE.originallocation" ; #doesnt work for the ?organOriginalLocation
+				fx:json.path.3 "$.Part01_001MIDDE.year" ; #doesnt work for ?organDob
 				. 
 				
 			[] a fx:root; 
@@ -50,12 +50,14 @@ WHERE
 	} 
 	SERVICE <x-sparql-anything:file:./output/base.json>
     { 
+		BIND(CONCAT("$.", ?_organ, ".building") AS ?organBuilding) .
+
 		fx:properties
-				fx:json.path.1 "$..Part01_001MIDDE..building" ;
-				fx:json.path.2 "$..Part01_001MIDDE..monumentnumber" ;
-				fx:json.path.3 "$..Part01_001MIDDE..name" ; 
-				fx:json.path.4 "$..Part01_001MIDDE..organnumber" ; 
-				fx:json.path.5 "$..Part01_001MIDDE..place" ; 
+				fx:json.path.1 ?organBuilding ;
+				fx:json.path.2 "$.Part01_001MIDDE.monumentnumber" ;
+				fx:json.path.3 "$.Part01_001MIDDE.name" ; 
+				fx:json.path.4 "$.Part01_001MIDDE.organnumber" ; 
+				fx:json.path.5 "$.Part01_001MIDDE.place" ; 
 				.
 				
 			[] a fx:root; 
@@ -69,12 +71,12 @@ WHERE
 	SERVICE <x-sparql-anything:file:./output/tech.json>
     { 
 		fx:properties
-				fx:json.path.1 "$..Part01_001MIDDE..aids" ;
-				fx:json.path.2 "$..Part01_001MIDDE..pitch" ;
-				fx:json.path.3 "$..Part01_001MIDDE..range1" ; 
-				fx:json.path.4 "$..Part01_001MIDDE..temperature" ; 
-				fx:json.path.5 "$..Part01_001MIDDE..windPres" ; 
-				fx:json.path.6 "$..Part01_001MIDDE..windSys" ; 
+				fx:json.path.1 "$.Part01_001MIDDE.aids" ;
+				fx:json.path.2 "$.Part01_001MIDDE.pitch" ;
+				fx:json.path.3 "$.Part01_001MIDDE.range1" ; 
+				fx:json.path.4 "$.Part01_001MIDDE.temperature" ; 
+				fx:json.path.5 "$.Part01_001MIDDE.windPres" ; 
+				fx:json.path.6 "$.Part01_001MIDDE.windSys" ; 
 				.
 				
 			[] a fx:root; 

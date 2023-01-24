@@ -23,8 +23,8 @@ WHERE
 
 		fx:properties
 				fx:json.path.1 ?organBuilder ;
-				fx:json.path.2 ?organOriginalLocation ; #doesnt work for the ?organOriginalLocation
-				fx:json.path.3 "$.Part01_001MIDDE.year" ; #doesnt work for ?organDob
+				fx:json.path.2 "$.Part01_001MIDDE.originallocation" ; # doesnt work for the ?organOriginalLocation
+				fx:json.path.3 "$.Part01_001MIDDE.year" ; # doesnt work for ?organDob
 				. 
 				
 			[] a fx:root; 
