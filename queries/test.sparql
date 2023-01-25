@@ -9,7 +9,7 @@ PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
 
 CONSTRUCT
   {
-	?organ a oont:Organ ;
+	?organ a oont:Organ;
 		oont:builder ?builder ;
 		oont:consolelocation ?originallocation ;
 		oont:dateOfBirth ?dateOfBirth ;
@@ -17,23 +17,14 @@ CONSTRUCT
 WHERE
   { SERVICE <x-sparql-anything:file:./output/history_base.json>
     { 
-		BIND(CONCAT("$.", ?_organ, ".builder") AS ?organBuilder) .
-		BIND(CONCAT("$.", ?_organ, ".originallocation") AS ?organOriginalLocation) .
-		BIND(CONCAT("$.", ?_organ, ".year") AS ?organDob) .
+		BIND(IRI(CONCAT(STR(xyz:),?_organ)) AS ?organ_slot)
 
-		fx:properties
-				fx:json.path.1 ?organBuilder ;
-				fx:json.path.2 "$.Part01_001MIDDE.originallocation" ; # doesnt work for the ?organOriginalLocation
-				fx:json.path.3 "$.Part01_001MIDDE.year" ; # doesnt work for ?organDob
-				. 
-				
-			[] a fx:root; 
-			rdf:_1 ?builder ;
-			rdf:_2 ?originallocation ;
-			rdf:_3 ?dateOfBirth ; 
-			.
-
-		BIND (?_organ AS ?organ) .
+		?root a fx:root ;
+      		?organ_slot ?organ .
+		
+		?organ xyz:builder ?builder ; 
+			xyz:originallocation ?originallocation ;
+			xyz:year ?dateOfBirth .
 	} 
   }
 
