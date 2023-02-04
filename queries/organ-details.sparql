@@ -27,10 +27,14 @@ CONSTRUCT
 		oont:windPressure ?windPressure ;
 		oont:windSystem ?windSystem ;
 	.
-	
-	?disposition xyz:divisionname ?divisionname . # xyz
+
+	?disposition xyz:divisionName ?divisionname . # xyz
 	?disposition oont:partition ?partition .
 	?disposition oont:AdditionalSpecification ?specification .
+
+	?change oont:date ?datechange .
+	?change oont:AdditionalSpecification ?description . 
+	?change oont:Builder ?builder .
   }
 WHERE
   { SERVICE <x-sparql-anything:file:./output/history_base.json>
@@ -107,7 +111,20 @@ WHERE
 			rdf:_2 ?divisionname ;
 			rdf:_3 ?partition ;
 			rdf:_4 ?specification ;
+	}
+	SERVICE <x-sparql-anything:file:./output/history_projects.json>  
+	{
+		fx:properties
+			fx:json.path.1 "$.Part01_001MIDDE[0].changes[0]";
+			fx:json.path.2 "$.Part01_001MIDDE[0].date";	
+			fx:json.path.3 "$.Part01_001MIDDE[0].description";	
+			fx:json.path.4 "$.Part01_001MIDDE[0].name";	
+			.
 
-		BIND (?_organ AS ?organ) .
+		[] a fx:root; 
+			rdf:_1 ?change ;
+			rdf:_2 ?datechange ;	
+			rdf:_3 ?description ;
+			rdf:_4 ?builder ;	
 	}
   }

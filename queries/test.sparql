@@ -7,17 +7,21 @@ PREFIX apf: <http://jena.apache.org/ARQ/property#>
 PREFIX organ: <http://w3id.org/polifonia/resource/organs/>
 PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
 
-# get dispositions
 CONSTRUCT
   {
 	?organ a oont:Organ ;
 		oont:builder ?builder ;
 		oont:consolelocation ?originallocation ;
+		oont:updatedAt ?change ;
 		oont:Disposition ?disposition  .
 
 	?disposition xyz:divisionname ?divisionname . # xyz
 	?disposition oont:partition ?partition .
 	?disposition oont:AdditionalSpecification ?specification .
+
+	?change oont:date ?datechange .
+	?change oont:AdditionalSpecification ?description . 
+	?change oont:Builder ?builder .
   }
 WHERE
   { 
@@ -30,7 +34,7 @@ WHERE
 			fx:json.path.2 "$.Part01_001MIDDE.originallocation" ; #doesnt work for the ?organOriginalLocation
 			. 
 				
-			[] a fx:root; 
+		[] a fx:root; 
 			rdf:_1 ?builder ;
 			rdf:_2 ?originallocation ;
 			.
@@ -51,10 +55,70 @@ WHERE
 			rdf:_2 ?divisionname ;
 			rdf:_3 ?partition ;
 			rdf:_4 ?specification ;
+	}
+	SERVICE <x-sparql-anything:file:./output/history_projects.json>  
+	{
+		fx:properties
+			fx:json.path.1 "$.Part01_001MIDDE[0].changes[0]";
+			fx:json.path.2 "$.Part01_001MIDDE[0].date";	
+			fx:json.path.3 "$.Part01_001MIDDE[0].description";	
+			fx:json.path.4 "$.Part01_001MIDDE[0].name";	
+			.
 
-		BIND (?_organ AS ?organ) .
+		[] a fx:root; 
+			rdf:_1 ?change ;
+			rdf:_2 ?datechange ;	
+			rdf:_3 ?description ;
+			rdf:_4 ?builder ;	
 	}
   }
+
+# # get dispositions
+# CONSTRUCT
+#   {
+# 	?organ a oont:Organ ;
+# 		oont:builder ?builder ;
+# 		oont:consolelocation ?originallocation ;
+# 		oont:Disposition ?disposition  .
+
+# 	?disposition xyz:divisionname ?divisionname . # xyz
+# 	?disposition oont:partition ?partition .
+# 	?disposition oont:AdditionalSpecification ?specification .
+#   }
+# WHERE
+#   { 
+# 	SERVICE <x-sparql-anything:file:./output/history_base.json>
+#     { 
+# 		BIND(CONCAT("$.", ?_organ, ".builder") AS ?organBuilder) .
+
+# 		fx:properties
+# 			fx:json.path.1 ?organBuilder ;
+# 			fx:json.path.2 "$.Part01_001MIDDE.originallocation" ; #doesnt work for the ?organOriginalLocation
+# 			. 
+				
+# 			[] a fx:root; 
+# 			rdf:_1 ?builder ;
+# 			rdf:_2 ?originallocation ;
+# 			.
+
+# 		BIND (?_organ AS ?organ) .
+# 	} 
+# 	SERVICE <x-sparql-anything:file:./output/dispositions.json> 
+# 	{
+# 		fx:properties
+# 			fx:json.path.1 "$.Part01_001MIDDE.dispositions[?(@.current==true)].description";
+# 			fx:json.path.2 "$.Part01_001MIDDE.dispositions[?(@.current==true)].disposition[0].division_name";
+# 			fx:json.path.3 "$.Part01_001MIDDE.dispositions[?(@.current==true)].disposition[0].stoplist[0].partition";
+# 			fx:json.path.4 "$.Part01_001MIDDE.dispositions[?(@.current==true)].disposition[0].stoplist[0].spec";
+# 			.
+
+# 		[] a fx:root; 
+# 			rdf:_1 ?disposition ;
+# 			rdf:_2 ?divisionname ;
+# 			rdf:_3 ?partition ;
+# 			rdf:_4 ?specification ;
+# 	}
+#   }
 
 
 # THIS WORKS!
