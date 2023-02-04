@@ -7,46 +7,41 @@ PREFIX apf: <http://jena.apache.org/ARQ/property#>
 PREFIX organ: <http://w3id.org/polifonia/resource/organs/>
 PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
 
-CONSTRUCT
-  {
-	?organ a oont:Organ ;
-		oont:builder ?builder ;
-		oont:consolelocation ?originallocation ;
-		oont:dateOfBirth ?dateOfBirth ;
-		oont:monument ?building ;
-		oont:monumentNumber ?monumentNumber ;
-		oont:name ?organName ;
-		oont:organNumber ?organNumber ;
-		oont:state ?state ;
-		oont:systemPlayingAids ?systemPlayingAids ;
-		oont:pitch ?pitch ;
-		oont:range1 ?range ;
-		oont:temperature ?temperature ;
-		oont:windPressure ?windPressure ;
-		oont:windSystem ?windSystem ;
-  }
-WHERE
-  { SERVICE <x-sparql-anything:file:./output/history_base.json>
-    { 
-		BIND(CONCAT("$.", ?_organ, ".builder") AS ?organBuilder) .
-		BIND(CONCAT("$.", ?_organ, ".originallocation") AS ?organOriginalLocation) .
-		BIND(CONCAT("$.", ?_organ, ".year") AS ?organDob) .
 
-		fx:properties
-				fx:json.path.1 "$.Part01_001MIDDE.builder" ;
-				fx:json.path.2 ?organOriginalLocation ; #doesnt work for the ?organOriginalLocation
-				fx:json.path.3 "$.Part01_001MIDDE.year" ; #doesnt work for ?organDob
-				. 
+
+# THIS WORKS!
+# CONSTRUCT
+#   {
+# 	?organ a oont:Organ ;
+# 		oont:builder ?builder ;
+# 		oont:consolelocation ?originallocation ;
+#   }
+# WHERE
+#   { SERVICE <x-sparql-anything:file:./output/history_base.json>
+#     { 
+# 		BIND(CONCAT("$.", ?_organ, ".builder") AS ?organBuilder) .
+
+# 		fx:properties
+# 			fx:json.path.1 ?organBuilder ;
+# 				. 
 				
-			[] a fx:root; 
-			rdf:_1 ?builder ;
-			rdf:_2 ?originallocation ;
-			rdf:_3 ?dateOfBirth ; 
-			.
+# 			[] a fx:root; 
+# 			rdf:_1 ?builder ;
+# 			.
 
-		BIND (?_organ AS ?organ) .
-	} 
-  }
+# 		BIND (?_organ AS ?organ) .
+# 	} SERVICE <x-sparql-anything:file:./output/history_base.json> {
+# 		BIND(CONCAT("$.", ?_organ, ".originallocation") AS ?organOriginalLocation) .
+
+# 			fx:properties
+# 				fx:json.path.1 ?organOriginalLocation ;
+# 				. 
+				
+# 			[] a fx:root; 
+# 			rdf:_1 ?originallocation ;
+# 			.
+# 	}
+#   }
 
 # CONSTRUCT
 #  {
