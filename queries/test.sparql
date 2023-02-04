@@ -13,11 +13,11 @@ CONSTRUCT
 	?organ a oont:Organ ;
 		oont:builder ?builder ;
 		oont:consolelocation ?originallocation ;
-		oont:createdAt ?disposition  .
-	# ?s ?p ?o .
-	# ?organcreation a oont:createdAt ;
-	?disposition xyz:divisionname ?divisionname .
-		
+		oont:Disposition ?disposition  .
+
+	?disposition xyz:divisionname ?divisionname . # xyz
+	?disposition oont:partition ?partition .
+	?disposition oont:AdditionalSpecification ?specification .
   }
 WHERE
   { 
@@ -28,7 +28,7 @@ WHERE
 		fx:properties
 			fx:json.path.1 ?organBuilder ;
 			fx:json.path.2 "$.Part01_001MIDDE.originallocation" ; #doesnt work for the ?organOriginalLocation
-				. 
+			. 
 				
 			[] a fx:root; 
 			rdf:_1 ?builder ;
@@ -41,16 +41,18 @@ WHERE
 	{
 		fx:properties
 			fx:json.path.1 "$.Part01_001MIDDE.dispositions[?(@.current==true)].description";
-			fx:json.path.2 "$.Part01_001MIDDE.dispositions[?(@.current==true)].disposition[*].division_name";
+			fx:json.path.2 "$.Part01_001MIDDE.dispositions[?(@.current==true)].disposition[0].division_name";
+			fx:json.path.3 "$.Part01_001MIDDE.dispositions[?(@.current==true)].disposition[0].stoplist[0].partition";
+			fx:json.path.4 "$.Part01_001MIDDE.dispositions[?(@.current==true)].disposition[0].stoplist[0].spec";
 			.
 
 		[] a fx:root; 
 			rdf:_1 ?disposition ;
 			rdf:_2 ?divisionname ;
+			rdf:_3 ?partition ;
+			rdf:_4 ?specification ;
 
 		BIND (?_organ AS ?organ) .
-
-			# ?s ?p ?o .
 	}
   }
 

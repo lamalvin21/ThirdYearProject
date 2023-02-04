@@ -22,10 +22,15 @@ CONSTRUCT
 		oont:state ?state ;
 		oont:systemPlayingAids ?systemPlayingAids ;
 		oont:pitch ?pitch ;
-		oont:range1 ?range ;
+		oont:range1 ?range ; # remove when compoundstop.json range is added?
 		oont:temperature ?temperature ;
 		oont:windPressure ?windPressure ;
 		oont:windSystem ?windSystem ;
+	.
+	
+	?disposition xyz:divisionname ?divisionname . # xyz
+	?disposition oont:partition ?partition .
+	?disposition oont:AdditionalSpecification ?specification .
   }
 WHERE
   { SERVICE <x-sparql-anything:file:./output/history_base.json>
@@ -88,4 +93,21 @@ WHERE
 			rdf:_6 ?windSystem ;
 			.
 	} 
+	SERVICE <x-sparql-anything:file:./output/dispositions.json> 
+	{
+		fx:properties
+			fx:json.path.1 "$.Part01_001MIDDE.dispositions[?(@.current==true)].description";
+			fx:json.path.2 "$.Part01_001MIDDE.dispositions[?(@.current==true)].disposition[0].division_name";
+			fx:json.path.3 "$.Part01_001MIDDE.dispositions[?(@.current==true)].disposition[0].stoplist[0].partition";
+			fx:json.path.4 "$.Part01_001MIDDE.dispositions[?(@.current==true)].disposition[0].stoplist[0].spec";
+			.
+
+		[] a fx:root; 
+			rdf:_1 ?disposition ;
+			rdf:_2 ?divisionname ;
+			rdf:_3 ?partition ;
+			rdf:_4 ?specification ;
+
+		BIND (?_organ AS ?organ) .
+	}
   }
