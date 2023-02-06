@@ -13,11 +13,15 @@ CONSTRUCT
 		oont:builder ?builder ;
 		oont:consolelocation ?originallocation ;
 		oont:dateOfBirth ?dateOfBirth ;
+		xyz:technicals ?technicals .
 
-		oont:particularities ?particularity ;
-		oont:history ?history ;
-		oont:creator ?creator ;
-		oont:moreInformation ?moreInformation ;
+		?technicals oont:systemPlayingAids ?systemPlayingAids .
+		?technicals oont:pitch ?pitch .
+		?technicals oont:range1 ?range1 . 
+		?technicals oont:range2 ?range2 .
+		?technicals oont:temperature ?temperature .
+		?technicals oont:windPressure ?windPressure .
+		?technicals oont:windSystem ?windSystem .
   }
 WHERE
   { SERVICE <x-sparql-anything:file:./output/history_base.json>
@@ -27,53 +31,117 @@ WHERE
 		BIND(CONCAT("$..", ?_organ, "..year") AS ?organDob) .
 
 		fx:properties
-				fx:json.path.1 ?organBuilder ;
-				fx:json.path.2 "$..Part01_001MIDDE..originallocation"; #doesnt work for the ?organOriginalLocation
-				fx:json.path.3 "$..Part01_001MIDDE..year" ; #doesnt work for ?organDob
-				. 
+			fx:json.path.1 ?organBuilder ;
+			fx:json.path.2 "$..Part01_001MIDDE..originallocation"; #doesnt work for the ?organOriginalLocation
+			fx:json.path.3 "$..Part01_001MIDDE..year" ; #doesnt work for ?organDob
+			. 
 				
-			[] a fx:root; 
+		[] a fx:root; 
 			rdf:_1 ?builder ;
 			rdf:_2 ?originallocation ;
 			rdf:_3 ?dateOfBirth ; 
 			.
 
 		BIND (?_organ AS ?organ) .
-	} SERVICE <x-sparql-anything:file:./output/texts_bijzonderheden.json> {
+	} SERVICE <x-sparql-anything:file:./output/texts_tech.json> {
+		BIND(CONCAT("$.", ?_organ) AS ?organTechnicals) .
+
+		fx:properties
+			fx:json.path.1 ?organTechnicals;.
+
+		[] a fx:root; 
+			rdf:_1 ?technicals ;
+	} SERVICE <x-sparql-anything:file:./output/tech.json>
+    { 
+		fx:properties
+			fx:json.path.1 "$.Part01_001MIDDE.aids" ;
+			fx:json.path.2 "$.Part01_001MIDDE.pitch" ;
+			fx:json.path.3 "$.Part01_001MIDDE.range1" ; 
+			fx:json.path.4 "$.Part01_001MIDDE.range2" ; 
+			fx:json.path.5 "$.Part01_001MIDDE.temperature" ; 
+			fx:json.path.6 "$.Part01_001MIDDE.windPres" ; 
+			fx:json.path.7 "$.Part01_001MIDDE.windSys" ; 
+			.
+				
+		[] a fx:root; 
+			rdf:_1 ?systemPlayingAids;
+			rdf:_2 ?pitch ; 
+			rdf:_3 ?range1 ;
+			rdf:_4 ?range2 ;
+			rdf:_5 ?temperature ;
+			rdf:_6 ?windPressure ;
+			rdf:_7 ?windSystem ;
+			.
+	} 
+  }
+
+# CONSTRUCT
+#   {
+# 	?organ a oont:Organ ;
+# 		oont:builder ?builder ;
+# 		oont:consolelocation ?originallocation ;
+# 		oont:dateOfBirth ?dateOfBirth ;
+
+# 		oont:particularities ?particularity ;
+# 		oont:history ?history ;
+# 		oont:creator ?creator ;
+# 		oont:moreInformation ?moreInformation ;
+#   }
+# WHERE
+#   { SERVICE <x-sparql-anything:file:./output/history_base.json>
+#     { 
+# 		BIND(CONCAT("$..", ?_organ, "..builder") AS ?organBuilder) .
+# 		BIND(CONCAT("$..", ?_organ, "..originallocation") AS ?organOriginalLocation) .
+# 		BIND(CONCAT("$..", ?_organ, "..year") AS ?organDob) .
+
+# 		fx:properties
+# 				fx:json.path.1 ?organBuilder ;
+# 				fx:json.path.2 "$..Part01_001MIDDE..originallocation"; #doesnt work for the ?organOriginalLocation
+# 				fx:json.path.3 "$..Part01_001MIDDE..year" ; #doesnt work for ?organDob
+# 				. 
+				
+# 			[] a fx:root; 
+# 			rdf:_1 ?builder ;
+# 			rdf:_2 ?originallocation ;
+# 			rdf:_3 ?dateOfBirth ; 
+# 			.
+
+# 		BIND (?_organ AS ?organ) .
+# 	} SERVICE <x-sparql-anything:file:./output/texts_bijzonderheden.json> {
 		
-		BIND(CONCAT("$.", ?_organ) AS ?organParticularity) .
+# 		BIND(CONCAT("$.", ?_organ) AS ?organParticularity) .
 
-		fx:properties
-				fx:json.path.1 ?organParticularity;.
+# 		fx:properties
+# 				fx:json.path.1 ?organParticularity;.
 
-		[] a fx:root; 
-			rdf:_1 ?particularity ;
-	} SERVICE <x-sparql-anything:file:./output/texts_hist.json> {
-		BIND(CONCAT("$.", ?_organ) AS ?organHistory) .
+# 		[] a fx:root; 
+# 			rdf:_1 ?particularity ;
+# 	} SERVICE <x-sparql-anything:file:./output/texts_hist.json> {
+# 		BIND(CONCAT("$.", ?_organ) AS ?organHistory) .
 
-		fx:properties
-				fx:json.path.1 ?organHistory;.
+# 		fx:properties
+# 				fx:json.path.1 ?organHistory;.
 
-		[] a fx:root; 
-			rdf:_1 ?history ;
-	} SERVICE <x-sparql-anything:file:./output/texts_kunst.json> {
-		BIND(CONCAT("$.", ?_organ) AS ?organCreator) .
+# 		[] a fx:root; 
+# 			rdf:_1 ?history ;
+# 	} SERVICE <x-sparql-anything:file:./output/texts_kunst.json> {
+# 		BIND(CONCAT("$.", ?_organ) AS ?organCreator) .
 
-		fx:properties
-				fx:json.path.1 ?organCreator;.
+# 		fx:properties
+# 				fx:json.path.1 ?organCreator;.
 
-		[] a fx:root; 
-			rdf:_1 ?creator ;
-	} SERVICE <x-sparql-anything:file:./output/texts_lit.json> {
-		BIND(CONCAT("$.", ?_organ) AS ?organMoreInformation) .
+# 		[] a fx:root; 
+# 			rdf:_1 ?creator ;
+# 	} SERVICE <x-sparql-anything:file:./output/texts_lit.json> {
+# 		BIND(CONCAT("$.", ?_organ) AS ?organMoreInformation) .
 
-		fx:properties
-				fx:json.path.1 ?organMoreInformation;.
+# 		fx:properties
+# 				fx:json.path.1 ?organMoreInformation;.
 
-		[] a fx:root; 
-			rdf:_1 ?moreInformation ;
-	}
-  } 
+# 		[] a fx:root; 
+# 			rdf:_1 ?moreInformation ;
+# 	}
+#   } 
 
 # CONSTRUCT
 #   {
@@ -232,16 +300,6 @@ WHERE
 # 		} 
 # 	} 
 #   }
-
-
-# PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-# PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-# PREFIX fx:   <http://sparql.xyz/facade-x/ns/>
-# PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
-# PREFIX owl: <http://www.w3.org/2002/07/owl#>
-# PREFIX apf: <http://jena.apache.org/ARQ/property#>
-# PREFIX organ: <http://w3id.org/polifonia/resource/organs/>
-# PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
 
 # CONSTRUCT
 #   {
