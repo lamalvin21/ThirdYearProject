@@ -12,78 +12,84 @@ CONSTRUCT
 	?organ a oont:Organ ;
 		oont:builder ?builder ;
 		oont:consolelocation ?originallocation ;
-		oont:updatedAt ?change ;
-		oont:Disposition ?disposition  .
+		oont:dateOfBirth ?dateOfBirth ;
 
-	?disposition xyz:divisionname ?divisionname . # xyz
-	?disposition oont:partition ?partition .
-	?disposition oont:AdditionalSpecification ?specification .
-
-	?change oont:date ?datechange .
-	?change oont:AdditionalSpecification ?description . 
-	?change oont:Builder ?builder .
+		oont:particularities ?particularity ;
+		oont:history ?history ;
+		oont:creator ?creator ;
+		oont:moreInformation ?moreInformation ;
   }
 WHERE
-  { 
-	SERVICE <x-sparql-anything:file:./output/history_base.json>
+  { SERVICE <x-sparql-anything:file:./output/history_base.json>
     { 
-		BIND(CONCAT("$.", ?_organ, ".builder") AS ?organBuilder) .
+		BIND(CONCAT("$..", ?_organ, "..builder") AS ?organBuilder) .
+		BIND(CONCAT("$..", ?_organ, "..originallocation") AS ?organOriginalLocation) .
+		BIND(CONCAT("$..", ?_organ, "..year") AS ?organDob) .
 
 		fx:properties
-			fx:json.path.1 ?organBuilder ;
-			fx:json.path.2 "$.Part01_001MIDDE.originallocation" ; #doesnt work for the ?organOriginalLocation
-			. 
+				fx:json.path.1 ?organBuilder ;
+				fx:json.path.2 "$..Part01_001MIDDE..originallocation"; #doesnt work for the ?organOriginalLocation
+				fx:json.path.3 "$..Part01_001MIDDE..year" ; #doesnt work for ?organDob
+				. 
 				
-		[] a fx:root; 
+			[] a fx:root; 
 			rdf:_1 ?builder ;
 			rdf:_2 ?originallocation ;
+			rdf:_3 ?dateOfBirth ; 
 			.
 
 		BIND (?_organ AS ?organ) .
-	} 
-	SERVICE <x-sparql-anything:file:./output/dispositions.json> 
-	{
+	} SERVICE <x-sparql-anything:file:./output/texts_bijzonderheden.json> {
+		
+		BIND(CONCAT("$.", ?_organ) AS ?organParticularity) .
+
 		fx:properties
-			fx:json.path.1 "$.Part01_001MIDDE.dispositions[?(@.current==true)].description";
-			fx:json.path.2 "$.Part01_001MIDDE.dispositions[?(@.current==true)].disposition[0].division_name";
-			fx:json.path.3 "$.Part01_001MIDDE.dispositions[?(@.current==true)].disposition[0].stoplist[0].partition";
-			fx:json.path.4 "$.Part01_001MIDDE.dispositions[?(@.current==true)].disposition[0].stoplist[0].spec";
-			.
+				fx:json.path.1 ?organParticularity;.
 
 		[] a fx:root; 
-			rdf:_1 ?disposition ;
-			rdf:_2 ?divisionname ;
-			rdf:_3 ?partition ;
-			rdf:_4 ?specification ;
-	}
-	SERVICE <x-sparql-anything:file:./output/history_projects.json>  
-	{
+			rdf:_1 ?particularity ;
+	} SERVICE <x-sparql-anything:file:./output/texts_hist.json> {
+		BIND(CONCAT("$.", ?_organ) AS ?organHistory) .
+
 		fx:properties
-			fx:json.path.1 "$.Part01_001MIDDE[0].changes[0]";
-			fx:json.path.2 "$.Part01_001MIDDE[0].date";	
-			fx:json.path.3 "$.Part01_001MIDDE[0].description";	
-			fx:json.path.4 "$.Part01_001MIDDE[0].name";	
-			.
+				fx:json.path.1 ?organHistory;.
 
 		[] a fx:root; 
-			rdf:_1 ?change ;
-			rdf:_2 ?datechange ;	
-			rdf:_3 ?description ;
-			rdf:_4 ?builder ;	
-	}
-  }
+			rdf:_1 ?history ;
+	} SERVICE <x-sparql-anything:file:./output/texts_kunst.json> {
+		BIND(CONCAT("$.", ?_organ) AS ?organCreator) .
 
-# # get dispositions
+		fx:properties
+				fx:json.path.1 ?organCreator;.
+
+		[] a fx:root; 
+			rdf:_1 ?creator ;
+	} SERVICE <x-sparql-anything:file:./output/texts_lit.json> {
+		BIND(CONCAT("$.", ?_organ) AS ?organMoreInformation) .
+
+		fx:properties
+				fx:json.path.1 ?organMoreInformation;.
+
+		[] a fx:root; 
+			rdf:_1 ?moreInformation ;
+	}
+  } 
+
 # CONSTRUCT
 #   {
 # 	?organ a oont:Organ ;
 # 		oont:builder ?builder ;
 # 		oont:consolelocation ?originallocation ;
+# 		oont:updatedAt ?change ;
 # 		oont:Disposition ?disposition  .
 
 # 	?disposition xyz:divisionname ?divisionname . # xyz
 # 	?disposition oont:partition ?partition .
 # 	?disposition oont:AdditionalSpecification ?specification .
+
+# 	?change oont:date ?datechange .
+# 	?change oont:AdditionalSpecification ?description . 
+# 	?change oont:Builder ?builder .
 #   }
 # WHERE
 #   { 
@@ -96,7 +102,7 @@ WHERE
 # 			fx:json.path.2 "$.Part01_001MIDDE.originallocation" ; #doesnt work for the ?organOriginalLocation
 # 			. 
 				
-# 			[] a fx:root; 
+# 		[] a fx:root; 
 # 			rdf:_1 ?builder ;
 # 			rdf:_2 ?originallocation ;
 # 			.
@@ -118,8 +124,22 @@ WHERE
 # 			rdf:_3 ?partition ;
 # 			rdf:_4 ?specification ;
 # 	}
-#   }
+# 	SERVICE <x-sparql-anything:file:./output/history_projects.json>  
+# 	{
+# 		fx:properties
+# 			fx:json.path.1 "$.Part01_001MIDDE[0].changes[0]";
+# 			fx:json.path.2 "$.Part01_001MIDDE[0].date";	
+# 			fx:json.path.3 "$.Part01_001MIDDE[0].description";	
+# 			fx:json.path.4 "$.Part01_001MIDDE[0].name";	
+# 			.
 
+# 		[] a fx:root; 
+# 			rdf:_1 ?change ;
+# 			rdf:_2 ?datechange ;	
+# 			rdf:_3 ?description ;
+# 			rdf:_4 ?builder ;	
+# 	}
+#   }
 
 # THIS WORKS!
 # CONSTRUCT

@@ -22,11 +22,15 @@ CONSTRUCT
 		oont:state ?state ;
 		oont:systemPlayingAids ?systemPlayingAids ;
 		oont:pitch ?pitch ;
-		oont:range1 ?range ; # remove when compoundstop.json range is added?
+		oont:range1 ?range ; # remove when compoundstop.json range is added? # add lower range as well
 		oont:temperature ?temperature ;
 		oont:windPressure ?windPressure ;
 		oont:windSystem ?windSystem ;
-	.
+		oont:particularities ?particularity ;
+		oont:history ?history ;
+		oont:creator ?creator ;
+		oont:moreInformation ?moreInformation ;
+		.
 
 	?disposition xyz:divisionName ?divisionname . # xyz
 	?disposition oont:partition ?partition .
@@ -126,5 +130,38 @@ WHERE
 			rdf:_2 ?datechange ;	
 			rdf:_3 ?description ;
 			rdf:_4 ?builder ;	
+	} SERVICE <x-sparql-anything:file:./output/texts_bijzonderheden.json> {
+		
+		BIND(CONCAT("$.", ?_organ) AS ?organParticularity) .
+
+		fx:properties
+				fx:json.path.1 ?organParticularity;.
+
+		[] a fx:root; 
+			rdf:_1 ?particularity ;
+	} SERVICE <x-sparql-anything:file:./output/texts_hist.json> {
+		BIND(CONCAT("$.", ?_organ) AS ?organHistory) .
+
+		fx:properties
+				fx:json.path.1 ?organHistory;.
+
+		[] a fx:root; 
+			rdf:_1 ?history ;
+	} SERVICE <x-sparql-anything:file:./output/texts_kunst.json> {
+		BIND(CONCAT("$.", ?_organ) AS ?organCreator) .
+
+		fx:properties
+				fx:json.path.1 ?organCreator;.
+
+		[] a fx:root; 
+			rdf:_1 ?creator ;
+	} SERVICE <x-sparql-anything:file:./output/texts_lit.json> {
+		BIND(CONCAT("$.", ?_organ) AS ?organMoreInformation) .
+
+		fx:properties
+				fx:json.path.1 ?organMoreInformation;.
+
+		[] a fx:root; 
+			rdf:_1 ?moreInformation ;
 	}
   }
