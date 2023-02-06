@@ -26,14 +26,14 @@ CONSTRUCT
 WHERE
   { SERVICE <x-sparql-anything:file:./output/history_base.json>
     { 
-		BIND(CONCAT("$..", ?_organ, "..builder") AS ?organBuilder) .
-		BIND(CONCAT("$..", ?_organ, "..originallocation") AS ?organOriginalLocation) .
-		BIND(CONCAT("$..", ?_organ, "..year") AS ?organDob) .
+		BIND(CONCAT("$.", ?_organ, ".builder") AS ?organBuilder) .
+		BIND(CONCAT("$.", ?_organ, ".originallocation") AS ?organOriginalLocation) .
+		BIND(CONCAT("$.", ?_organ, ".year") AS ?organDob) .
 
 		fx:properties
 			fx:json.path.1 ?organBuilder ;
-			fx:json.path.2 "$..Part01_001MIDDE..originallocation"; #doesnt work for the ?organOriginalLocation
-			fx:json.path.3 "$..Part01_001MIDDE..year" ; #doesnt work for ?organDob
+			fx:json.path.2 "$.Part01_001MIDDE.originallocation"; #doesnt work for the ?organOriginalLocation
+			fx:json.path.3 "$.Part01_001MIDDE.year" ; #doesnt work for ?organDob
 			. 
 				
 		[] a fx:root; 
@@ -90,15 +90,15 @@ WHERE
 # WHERE
 #   { SERVICE <x-sparql-anything:file:./output/history_base.json>
 #     { 
-# 		BIND(CONCAT("$..", ?_organ, "..builder") AS ?organBuilder) .
-# 		BIND(CONCAT("$..", ?_organ, "..originallocation") AS ?organOriginalLocation) .
-# 		BIND(CONCAT("$..", ?_organ, "..year") AS ?organDob) .
+# 		BIND(CONCAT("$.", ?_organ, ".builder") AS ?organBuilder) .
+# 		BIND(CONCAT("$.", ?_organ, ".originallocation") AS ?organOriginalLocation) .
+# 		BIND(CONCAT("$.", ?_organ, ".year") AS ?organDob) .
 
 # 		fx:properties
 # 				fx:json.path.1 ?organBuilder ;
-# 				fx:json.path.2 "$..Part01_001MIDDE..originallocation"; #doesnt work for the ?organOriginalLocation
-# 				fx:json.path.3 "$..Part01_001MIDDE..year" ; #doesnt work for ?organDob
-# 				. 
+# 				fx:json.path.2 "$.Part01_001MIDDE.originallocation"; #doesnt work for the ?organOriginalLocation
+# 				fx:json.path.3 "$.Part01_001MIDDE.year" ; #doesnt work for ?organDob
+# 				.
 				
 # 			[] a fx:root; 
 # 			rdf:_1 ?builder ;
@@ -311,14 +311,14 @@ WHERE
 # WHERE
 #   { SERVICE <x-sparql-anything:file:./output/history_base.json>
 #     { 
-# 		BIND(CONCAT("$..", ?_organ, "..builder") AS ?organBuilder) .
-# 		BIND(CONCAT("$..", ?_organ, "..originallocation") AS ?organOriginalLocation) .
-# 		BIND(CONCAT("$..", ?_organ, "..year") AS ?organDob) .
+# 		BIND(CONCAT("$.", ?_organ, ".builder") AS ?organBuilder) .
+# 		BIND(CONCAT("$.", ?_organ, ".originallocation") AS ?organOriginalLocation) .
+# 		BIND(CONCAT("$.", ?_organ, ".year") AS ?organDob) .
 
 # 		fx:properties
 # 				fx:json.path.1 ?organBuilder ;
-# 				fx:json.path.2 "$..Part01_001MIDDE..originallocation"; #doesnt work for the ?organOriginalLocation
-# 				fx:json.path.3 "$..Part01_001MIDDE..year" ; #doesnt work for ?organDob
+# 				fx:json.path.2 "$.Part01_001MIDDE.originallocation"; #doesnt work for the ?organOriginalLocation
+# 				fx:json.path.3 "$.Part01_001MIDDE.year" ; #doesnt work for ?organDob
 # 				. 
 				
 # 			[] a fx:root; 
