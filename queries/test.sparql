@@ -6,6 +6,39 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX apf: <http://jena.apache.org/ARQ/property#>
 PREFIX organ: <http://w3id.org/polifonia/resource/organs/>
 PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
+PREFIX core: <https://w3id.org/arco/ontology/core/>
+
+	# ?organ a oont:Organ ;
+	# 	oont:builder ?builder ;
+	# 	oont:consolelocation ?originallocation ;
+	# 	oont:dateOfBirth ?dateOfBirth ;
+	# 	oont:monument ?building ;
+	# 	oont:monumentNumber ?monumentNumber ;
+	# 	oont:name ?organName ;
+	# 	oont:organNumber ?organNumber ;
+	# 	oont:state ?state ;
+	# 	xyz:technicals ?technicals ; # xyz
+	# 	oont:particularities ?particularity ;
+	# 	oont:history ?history ;
+	# 	oont:creator ?creator ;
+	# 	oont:moreInformation ?moreInformation ;
+	# 	.
+
+	# ?technicals oont:systemPlayingAids ?systemPlayingAids .
+	# ?technicals oont:pitch ?pitch .
+	# ?technicals oont:range1 ?range1 . 
+	# ?technicals oont:range2 ?range2 .
+	# ?technicals oont:temperature ?temperature .
+	# ?technicals oont:windPressure ?windPressure .
+	# ?technicals oont:windSystem ?windSystem .
+	
+	# ?disposition xyz:divisionName ?divisionname . # xyz
+	# ?disposition oont:partition ?partition .
+	# ?disposition oont:AdditionalSpecification ?specification .
+
+	# ?change oont:date ?datechange .
+	# ?change oont:AdditionalSpecification ?description . 
+	# ?change oont:Builder ?builder .
 
 CONSTRUCT
   {

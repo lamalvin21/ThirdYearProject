@@ -6,6 +6,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX apf: <http://jena.apache.org/ARQ/property#>
 PREFIX organ: <http://w3id.org/polifonia/resource/organs/>
 PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
+PREFIX core: <https://w3id.org/arco/ontology/core/>
 
 # evaluate using size of files, no. service calls, files queried. 
 
@@ -20,7 +21,7 @@ CONSTRUCT
 		oont:name ?organName ;
 		oont:organNumber ?organNumber ;
 		oont:state ?state ;
-		xyz:technicals ?technicals ; # xyz
+		xyz:technicals ?technicals ; 
 		oont:particularities ?particularity ;
 		oont:history ?history ;
 		oont:creator ?creator ;
@@ -29,13 +30,13 @@ CONSTRUCT
 
 	?technicals oont:systemPlayingAids ?systemPlayingAids .
 	?technicals oont:pitch ?pitch .
-	?technicals oont:range1 ?range1 . 
-	?technicals oont:range2 ?range2 .
+	?technicals oont:keyboardRange ?range1 . 
+	?technicals oont:pedalRange ?range2 . 
 	?technicals oont:temperature ?temperature .
 	?technicals oont:windPressure ?windPressure .
 	?technicals oont:windSystem ?windSystem .
 	
-	?disposition xyz:divisionName ?divisionname . # xyz
+	?disposition xyz:divisionName ?divisionname . 
 	?disposition oont:partition ?partition .
 	?disposition oont:AdditionalSpecification ?specification .
 
