@@ -7,6 +7,8 @@ PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
 PREFIX core: <https://w3id.org/arco/ontology/core/>
 
 # evaluate using size of files, no. service calls, files queried. 
+# add wikidata links URI (manually) on generic stuff e.g. organ etc.
+# add custom links (URI) to other specific stuff e.g. location. 
 
 CONSTRUCT
   {
