@@ -2,8 +2,6 @@ PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX fx:   <http://sparql.xyz/facade-x/ns/>
 PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX apf: <http://jena.apache.org/ARQ/property#>
 PREFIX organ: <http://w3id.org/polifonia/resource/organs/>
 PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
 PREFIX core: <https://w3id.org/arco/ontology/core/>
