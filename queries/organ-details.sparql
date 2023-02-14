@@ -42,7 +42,11 @@ CONSTRUCT
 
 	?change oont:date ?datechange .
 	?change oont:AdditionalSpecification ?description . 
-	?change oont:Builder ?builder1 .
+	?change oont:Builder ?maintainer .
+
+	?building oont:extraInformation ?buildinginfo .
+	?state oont:extraInformation ?stateinfo .
+	?maintainer oont:extraInformation ?maintainerinfo .
   }
 WHERE
   { SERVICE <x-sparql-anything:file:./output/history_base.json>
@@ -53,8 +57,8 @@ WHERE
 
 		fx:properties
 			fx:json.path.1 ?organBuilder ;
-			fx:json.path.2 "$.Part01_001MIDDE.originallocation" ; #doesnt work for the ?organOriginalLocation
-			fx:json.path.3 "$.Part01_001MIDDE.year" ; #doesnt work for ?organDob
+			fx:json.path.2 "$.Part01_001MIDDE.originallocation" ; 
+			fx:json.path.3 "$.Part01_001MIDDE.year" ; 
 			. 
 				
 			[] a fx:root; 
@@ -84,6 +88,11 @@ WHERE
 			rdf:_4 ?organNumber ;
 			rdf:_5 ?state ;
 			.
+
+			# Turn any buildinginfo into URI format
+			BIND(IRI(REPLACE(CONCAT("https://nl.wikipedia.org/wiki/",?building), " ", "_")) AS ?buildinginfo) . 
+			BIND(IRI(REPLACE(CONCAT("https://nl.wikipedia.org/wiki/",?state), " ", "_")) AS ?stateinfo) .
+
 	} 
 	SERVICE <x-sparql-anything:file:./output/texts_tech.json> 
 	{
@@ -145,7 +154,10 @@ WHERE
 			rdf:_1 ?change ;
 			rdf:_2 ?datechange ;	
 			rdf:_3 ?description ;
-			rdf:_4 ?builder1 ;	
+			rdf:_4 ?maintainer ;	
+
+		BIND(IRI(REPLACE(CONCAT("https://nl.wikipedia.org/wiki/",?maintainer), " ", "_")) AS ?maintainerinfo) .
+
 	} 
 	SERVICE <x-sparql-anything:file:./output/texts_bijzonderheden.json> 
 	{
