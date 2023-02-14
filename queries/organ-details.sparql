@@ -7,8 +7,6 @@ PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
 PREFIX core: <https://w3id.org/arco/ontology/core/>
 
 # evaluate using size of files, no. service calls, files queried. 
-# add wikidata links URI (manually) on generic stuff e.g. organ etc.
-# add custom links (URI) to other specific stuff e.g. location. 
 
 CONSTRUCT
   {
@@ -94,7 +92,7 @@ WHERE
 			rdf:_5 ?state ;
 			.
 
-			# Turn any buildinginfo into URI format
+			# Turn any specifc building into URI format
 			BIND(IRI(REPLACE(CONCAT("https://nl.wikipedia.org/wiki/",?building), " ", "_")) AS ?buildinginfo) . 
 			BIND(IRI(REPLACE(CONCAT("https://nl.wikipedia.org/wiki/",?state), " ", "_")) AS ?stateinfo) .
 
