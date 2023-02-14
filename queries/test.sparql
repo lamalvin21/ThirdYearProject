@@ -13,8 +13,8 @@ CONSTRUCT
 	?organ a oont:Organ ;
 		core:isDescribedBy ?organName ;
 		oont:windPressure ?windpressure ;
-		oont:temperature ?temperature .
-		
+		oont:temperature ?temperature ;
+		.
 
 	?organName rdfs:subclassOf ?description .
 	?organName core:hasPlace ?place .

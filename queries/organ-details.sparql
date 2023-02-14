@@ -42,7 +42,7 @@ CONSTRUCT
 
 	?change oont:date ?datechange .
 	?change oont:AdditionalSpecification ?description . 
-	?change oont:Builder ?builder .
+	?change oont:Builder ?builder1 .
   }
 WHERE
   { SERVICE <x-sparql-anything:file:./output/history_base.json>
@@ -145,7 +145,7 @@ WHERE
 			rdf:_1 ?change ;
 			rdf:_2 ?datechange ;	
 			rdf:_3 ?description ;
-			rdf:_4 ?builder ;	
+			rdf:_4 ?builder1 ;	
 	} 
 	SERVICE <x-sparql-anything:file:./output/texts_bijzonderheden.json> 
 	{
