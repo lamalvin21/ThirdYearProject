@@ -42,14 +42,28 @@ CONSTRUCT
 	?change oont:AdditionalSpecification ?description . 
 	?change oont:Builder ?maintainer .
 
+	# custom info 
 	?building oont:extraInformation ?buildinginfo .
 	?state oont:extraInformation ?stateinfo .
 	?maintainer oont:extraInformation ?maintainerinfo .
 
+	# generic info
 	?pitch oont:extraInformation ?pitchinfo .
 	?windPressure oont:extraInformation ?windPressureInfo .
 	?windSystem oont:extraInformation ?windPressureInfo .
 	?divisionname oont:extraInformation ?divisioninfo .
+
+	# musicbrainz
+	?organ rdfs:subClassOf ?barrelorgan .
+	?organ rdfs:subClassOf ?electricorgan .
+	?organ rdfs:subClassOf ?pipeorgan .
+	?organ rdfs:subClassOf ?reedorgan .
+	?organ rdf:type ?windinstrument . 
+
+	?pipeorgan oont:extraInformation ?pipeorganinfo .
+	?reedorgan oont:locationImage ?reedorganimage .
+	?organ oont:extraInformation ?organwikidata .
+
   }
 WHERE
   { SERVICE <x-sparql-anything:file:./output/history_base.json>
@@ -210,4 +224,13 @@ WHERE
 		[] a fx:root; 
 			rdf:_1 ?moreInformation ; .
 	}
+
+	BIND(IRI("https://www.wikidata.org/wiki/Q752638") AS ?barrelorgan) .
+	BIND(IRI("https://www.wikidata.org/wiki/Q1327327") AS ?electricorgan) .
+	BIND(IRI("https://www.wikidata.org/wiki/Q281460") AS ?pipeorgan) .
+	BIND(IRI("https://en.wikisource.org/wiki/1911_Encyclopædia_Britannica/Organ ") AS ?pipeorganinfo) .
+	BIND(IRI("https://www.wikidata.org/wiki/Q12460259") AS ?reedorgan) .
+	BIND(IRI("https://staticbrainz.org/irombook/reed_organ/reed_organ.png") AS ?reedorganimage) . 
+	BIND(IRI("https://www.wikidata.org/wiki/Q173453") AS ?windinstrument) .
+	BIND(IRI("https://www.wikidata.org/wiki/Q1444") AS ?organwikidata) .
   }
