@@ -69,6 +69,11 @@ save list to a SPARQL Result Set file:
 ```
 fx -q queries/list-documents.sparql -o data/list-documents.xml -f XML
 
+### Get details of an organ
+Put code of any organ in the --values parameter
+```
+fx -q queries/organ-details.sparql --values organ=Part01_001MIDDE
+```
 
 ## Database mappings
 
