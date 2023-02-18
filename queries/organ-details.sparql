@@ -5,6 +5,7 @@ PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
 PREFIX organ: <http://w3id.org/polifonia/resource/organs/>
 PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
 PREFIX core: <https://w3id.org/arco/ontology/core/>
+PREFIX wd: <https://www.wikidata.org/wiki/> 
 
 # evaluate using size of files, no. service calls, files queried. 
 
@@ -53,7 +54,7 @@ CONSTRUCT
 	?windSystem oont:extraInformation ?windPressureInfo .
 	?divisionname oont:extraInformation ?divisioninfo .
 
-	# musicbrainz
+	# Musicbrainz
 	?organ rdfs:subClassOf ?barrelorgan .
 	?organ rdfs:subClassOf ?electricorgan .
 	?organ rdfs:subClassOf ?pipeorgan .
@@ -63,6 +64,29 @@ CONSTRUCT
 	?pipeorgan oont:extraInformation ?pipeorganinfo .
 	?reedorgan oont:locationImage ?reedorganimage .
 	?organ oont:extraInformation ?organwikidata .
+
+	# Wikidata
+	?organwikidata wd:Property:P279 ?keyboardinstrument .
+	?organwikidata wd:Property:P279 ?buildingcomponent .
+	?organwikidata wd:Property:P2579 ?organology .
+	?organwikidata wd:Property:P366 ?westernclassicalmusic .
+	?organwikidata wd:Property:P366 ?musictradition .
+	?organwikidata wd:Property:P3095 ?organexpert .
+	?organwikidata wd:Property:P1535 ?organist .
+	?organwikidata wd:Property:P1343 ?catholicencyclopedia .
+	?organwikidata wd:Property:P1343 ?metropolitanmuseumofarttaggingvocabulary .
+	?organwikidata wd:Property:P1709 ?dbpedia .
+
+	?organwikidata wd:Property:P527 ?organcase .
+	?organwikidata wd:Property:P527 ?organpipe .
+	?organwikidata wd:Property:P527 ?musicalkeyboard .
+	?organwikidata wd:Property:P527 ?pedalkeyboard .
+	?organwikidata wd:Property:P527 ?organstop .
+	?organwikidata wd:Property:P527 ?organconsole .
+	?organwikidata wd:Property:P527 ?swellbox .
+
+	?organwikidata wd:Property:P1889 ?pipeorgan .
+
 
   }
 WHERE
@@ -225,12 +249,33 @@ WHERE
 			rdf:_1 ?moreInformation ; .
 	}
 
-	BIND(IRI("https://www.wikidata.org/wiki/Q752638") AS ?barrelorgan) .
-	BIND(IRI("https://www.wikidata.org/wiki/Q1327327") AS ?electricorgan) .
-	BIND(IRI("https://www.wikidata.org/wiki/Q281460") AS ?pipeorgan) .
+	# Musicbrainz
+	BIND(wd:Q752638 AS ?barrelorgan) .
+	BIND(wd:Q1327327 AS ?electricorgan) .
+	BIND(wd:Q281460 AS ?pipeorgan) .
 	BIND(IRI("https://en.wikisource.org/wiki/1911_Encyclopædia_Britannica/Organ ") AS ?pipeorganinfo) .
-	BIND(IRI("https://www.wikidata.org/wiki/Q12460259") AS ?reedorgan) .
+	BIND(wd:Q12460259 AS ?reedorgan) .
 	BIND(IRI("https://staticbrainz.org/irombook/reed_organ/reed_organ.png") AS ?reedorganimage) . 
-	BIND(IRI("https://www.wikidata.org/wiki/Q173453") AS ?windinstrument) .
-	BIND(IRI("https://www.wikidata.org/wiki/Q1444") AS ?organwikidata) .
+	BIND(wd:Q173453 AS ?windinstrument) .
+	BIND(wd:Q1444 AS ?organwikidata) .
+
+	# Wikidata
+	BIND(wd:Q52954 AS ?keyboardinstrument) .
+	BIND(wd:Q19603939 AS ?buildingcomponent) .
+	BIND(wd:Q11163731 AS ?organology) .
+	BIND(wd:Q9730 AS ?westernclassicalmusic) .
+	BIND(wd:Q60733114 AS ?musictradition) .
+	BIND(wd:Q1495811 AS ?organexpert) .
+	BIND(wd:Q765778 AS ?organist) .
+	BIND(wd:Q302556 AS ?catholicencyclopedia) .
+	BIND(wd:Q106727050 AS ?metropolitanmuseumofarttaggingvocabulary) .
+	BIND(IRI("https://dbpedia.org/ontology/Organ") AS ?dbpedia) .
+	BIND(wd:Q2927648 AS ?organcase) .
+	BIND(wd:Q1510738 AS ?organpipe) .
+	BIND(wd:Q901207 AS ?musicalkeyboard) .
+	BIND(wd:Q1758965 AS ?pedalkeyboard) .
+	BIND(wd:Q1446290 AS ?organstop) .
+	BIND(wd:Q392573 AS ?organconsole) .
+	BIND(wd:Q25112583 AS ?swellbox) .
+
   }
