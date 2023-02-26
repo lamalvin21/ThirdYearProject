@@ -13,7 +13,6 @@ CONSTRUCT {
 		core:isDescribedBy ?organName ;
 		core:buildingInfo ?buildinginfo ;
 		
-
 } WHERE {
 	SERVICE <x-sparql-anything:file:./output/base.json> {
 		fx:properties

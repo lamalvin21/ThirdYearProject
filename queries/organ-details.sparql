@@ -86,8 +86,6 @@ CONSTRUCT
 	?organwikidata wd:Property:P527 ?swellbox .
 
 	?organwikidata wd:Property:P1889 ?pipeorgan .
-
-
   }
 WHERE
   { SERVICE <x-sparql-anything:file:./output/history_base.json>
