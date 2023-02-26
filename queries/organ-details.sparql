@@ -40,7 +40,7 @@ CONSTRUCT
 	?disposition oont:AdditionalSpecification ?specification .
 
 	?change oont:date ?datechange .
-	?change oont:AdditionalSpecification ?description . 
+	?change oont:AdditionalSpecification ?changedescription . 
 	?change oont:Builder ?maintainer .
 
 	# custom info 
@@ -201,7 +201,7 @@ WHERE
 		[] a fx:root; 
 			rdf:_1 ?change ;
 			rdf:_2 ?datechange ;	
-			rdf:_3 ?description ;
+			rdf:_3 ?changedescription ;
 			rdf:_4 ?maintainer ;
 			.	
 
