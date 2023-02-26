@@ -18,11 +18,13 @@ CONSTRUCT
 		oont:name ?organName ;
 		oont:organNumber ?organNumber ;
 		oont:state ?state ;
-		xyz:technicals ?technicals ; 
 		oont:particularities ?particularity ;
 		oont:history ?history ;
 		oont:creator ?creator ;
 		oont:moreInformation ?moreInformation ;
+		xyz:technicals ?technicals ; 
+		xyz:disposition ?disposition ;
+		xyz:change ?change ;
 		.
 
 	?technicals oont:systemPlayingAids ?systemPlayingAids .
@@ -129,7 +131,6 @@ WHERE
 			# Turn any specifc building into URI format
 			BIND(IRI(REPLACE(CONCAT("https://nl.wikipedia.org/wiki/",?building), " ", "_")) AS ?buildinginfo) . 
 			BIND(IRI(REPLACE(CONCAT("https://nl.wikipedia.org/wiki/",?state), " ", "_")) AS ?stateinfo) .
-
 	} 
 	SERVICE <x-sparql-anything:file:./output/texts_tech.json> 
 	{
@@ -273,5 +274,4 @@ WHERE
 	BIND(wd:Q1446290 AS ?organstop) .
 	BIND(wd:Q392573 AS ?organconsole) .
 	BIND(wd:Q25112583 AS ?swellbox) .
-
   }
