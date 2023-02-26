@@ -2,9 +2,7 @@ PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX fx:   <http://sparql.xyz/facade-x/ns/>
 PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
-PREFIX organ: <http://w3id.org/polifonia/resource/organs/>
 PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
-PREFIX core: <https://w3id.org/arco/ontology/core/>
 PREFIX wd: <https://www.wikidata.org/wiki/> 
 
 # evaluate using size of files, no. service calls, files queried. 
@@ -40,7 +38,7 @@ CONSTRUCT
 	?disposition oont:AdditionalSpecification ?specification .
 
 	?change oont:date ?datechange .
-	?change oont:AdditionalSpecification ?description . 
+	?change oont:AdditionalSpecification ?changedescription . 
 	?change oont:Builder ?maintainer .
 
 	# custom info 
@@ -199,7 +197,7 @@ WHERE
 		[] a fx:root; 
 			rdf:_1 ?change ;
 			rdf:_2 ?datechange ;	
-			rdf:_3 ?description ;
+			rdf:_3 ?changedescription ;
 			rdf:_4 ?maintainer ;
 			.	
 
