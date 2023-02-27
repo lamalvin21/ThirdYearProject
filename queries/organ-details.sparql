@@ -101,7 +101,6 @@ WHERE
 			rdf:_1 ?builder ; 
 
 		BIND (?_organ AS ?organ) .
-
 	} 
 	SERVICE <x-sparql-anything:file:./output/history_base.json> 
 	{
