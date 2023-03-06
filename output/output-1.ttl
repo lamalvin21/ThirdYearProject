@@ -1,0 +1,74 @@
+@prefix fx:   <http://sparql.xyz/facade-x/ns/> .
+@prefix oont: <http://w3id.org/polifonia/ontology/organs/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd:   <https://www.wikidata.org/wiki/> .
+@prefix xyz:  <http://sparql.xyz/facade-x/data/> .
+
+""      xyz:divisionName              "Hoofdwerk (II) (blokwerk)" ;
+        oont:AdditionalSpecification  "16'" ;
+        oont:partition                "" .
+
+wd:Q12460259  oont:locationImage  <https://staticbrainz.org/irombook/reed_organ/reed_organ.png> .
+
+"Hoofdwerk (II) (blokwerk)"
+        oont:extraInformation  <https://organhistoricalsociety.org/OrganHistory/works/works05.htm> .
+
+"klaviatuur gewijzigd"
+        oont:AdditionalSpecification  "Gerrit Petersz 1508" ;
+        oont:Builder                  "Gerrit Petersz" ;
+        oont:date                     "1508" .
+
+"in 1886 verdwenen"  oont:extraInformation
+                <https://organhistoricalsociety.org/OrganHistory/works/works06.htm> .
+
+"Werkindeling\nhoofdwerk (blokwerk), rugpositief, bovenwerk, aangehangen pedaal\n\nDispositie\n\n@Hoofdwerk (II) (blokwerk)\n\nPrestant\nOctaaf\nOctaaf@\n@\n\n16'\n8'\n4'@\n\n@Rugpositief(I)\n6 stemmen\n\nPrestant Dd\nQuintadeen\nOctaaf Dd\nFluit\nMixtuur\nSexquialter D@\n@\n\n\n8'\n8'\n4'\n4'\n2-4 st.\n2 st.@\n\n@Bovenwerk(III)\n6 stemmen\n\nHolpijp\nPrestant Dd\nOpenfluit\nNasard\nGemshoorn\nSifflet Dd*@\n@\n\n\n8'\n4'\n4'\n3'\n2'\n1'@\n\n@Pedaal\n1 stem\n\nTrompet@\n@\n\n\n8'@\n\n* vanaf a1\n\nWerktuiglijke registers\nkoppeling HW-RP\nafsluiters HW, RP, BW, Ped\n\nSamenstelling vulstemmen\nMixtuur RP\n\nF\n1\n2/3\n\nc\n1\n2/3\n\nc1\n1 1/3\n1 1/3\n1\n1\n\nc2\n2\n2\n1 1/3\n1 1/3\n\nSexquialter RP gis1 2 2/3 - 1 3/5\n\nToonhoogte\noorspronkelijk ca een kwart lager dan a1 = 440 Hz, nu a1 = 466 Hz\nTemperatuur niet vast te stellen\n\nManuaalomvang HW FGA-c3, RP en BW FGA-g2a2\nPedaalomvang C-d1 (Cis,Dis,Fis,Gis octaaf hoger aangesloten)\n\nWindvoorziening in 1886 verdwenen\nWinddruk niet vast te stellen\n\nPlaats klaviatuur voorzijde hoofdkas"
+        oont:keyboardRange      "HW FGA-c3, RP en BW FGA-g2a2" ;
+        oont:pedalRange         "C-d1 (Cis,Dis,Fis,Gis octaaf hoger aangesloten)" ;
+        oont:pitch              "oorspronkelijk ca een kwart lager dan a1 = 440 Hz, nu a1 = 466 Hz" ;
+        oont:systemPlayingAids  "koppeling HW-RP\nafsluiters HW, RP, BW, Ped" ;
+        oont:temperature        "niet vast te stellen" ;
+        oont:windPressure       "niet vast te stellen" ;
+        oont:windSystem         "in 1886 verdwenen" .
+
+"Koorkerk"  oont:extraInformation  <https://nl.wikipedia.org/wiki/Koorkerk> .
+
+"Gerrit Petersz"  oont:extraInformation
+                <https://nl.wikipedia.org/wiki/Gerrit_Petersz> .
+
+"Part01_001MIDDE"  rdf:type    wd:Q173453 , oont:Organ ;
+        rdfs:subClassOf        wd:Q1327327 , wd:Q281460 , wd:Q12460259 , wd:Q752638 ;
+        xyz:change             "klaviatuur gewijzigd" ;
+        xyz:disposition        "" ;
+        xyz:technicals         "Werkindeling\nhoofdwerk (blokwerk), rugpositief, bovenwerk, aangehangen pedaal\n\nDispositie\n\n@Hoofdwerk (II) (blokwerk)\n\nPrestant\nOctaaf\nOctaaf@\n@\n\n16'\n8'\n4'@\n\n@Rugpositief(I)\n6 stemmen\n\nPrestant Dd\nQuintadeen\nOctaaf Dd\nFluit\nMixtuur\nSexquialter D@\n@\n\n\n8'\n8'\n4'\n4'\n2-4 st.\n2 st.@\n\n@Bovenwerk(III)\n6 stemmen\n\nHolpijp\nPrestant Dd\nOpenfluit\nNasard\nGemshoorn\nSifflet Dd*@\n@\n\n\n8'\n4'\n4'\n3'\n2'\n1'@\n\n@Pedaal\n1 stem\n\nTrompet@\n@\n\n\n8'@\n\n* vanaf a1\n\nWerktuiglijke registers\nkoppeling HW-RP\nafsluiters HW, RP, BW, Ped\n\nSamenstelling vulstemmen\nMixtuur RP\n\nF\n1\n2/3\n\nc\n1\n2/3\n\nc1\n1 1/3\n1 1/3\n1\n1\n\nc2\n2\n2\n1 1/3\n1 1/3\n\nSexquialter RP gis1 2 2/3 - 1 3/5\n\nToonhoogte\noorspronkelijk ca een kwart lager dan a1 = 440 Hz, nu a1 = 466 Hz\nTemperatuur niet vast te stellen\n\nManuaalomvang HW FGA-c3, RP en BW FGA-g2a2\nPedaalomvang C-d1 (Cis,Dis,Fis,Gis octaaf hoger aangesloten)\n\nWindvoorziening in 1886 verdwenen\nWinddruk niet vast te stellen\n\nPlaats klaviatuur voorzijde hoofdkas" ;
+        oont:builder           "Peter Gerritsz" ;
+        oont:consolelocation   "Utrecht, Nicolaikerk" ;
+        oont:creator           "Vijfdelige opbouw met \"afhangende schouders\". De vormen van het oudste gedeelte, de hoofdkas, zijn grotendeels ontleend aan de steenarchitectuur. Let op het verschil tussen de vrij strake decoratie van de lijsten boven de torens en het vrij wilde, flamboyante snijwerk aan de overige lijsten. Duidelijk is te zien dat de spitse middentoren een latere toevoeging is, vooral aan het snijwerk. Dit bestaat uit golfvormige bladranken met bladfiguren, een ornamentiek die typerend is voor het midden van de 16e eeuw.\nHet rugpositief heeft een verhoogde middentoren en spitse zijtorens met aan de binnenzijden spiegelvelden en aan de buitenzijden enkelvoudige buitenvelden. Deze opbouw gaat waarschijnlijk terug op het rugwerk van het in 1508 verbouwde orgel in de Pieterskerk te Utrecht. Het snijwerk heeft hetzelfde karakter als dat van de middentoren van het hoofdwerk. De frontons met koppen op de rugwerkkast uit 1547 waren volgens de laatste mode. Een dergelijke decoratie was enige jaren tevoren aangebracht in het nieuwe raadhuis in Utrecht. Vergelijkbaar zijn de ruitvormige panelen met koppen op de balustrade." ;
+        oont:dateOfBirth       "1479" ;
+        oont:extraInformation  wd:Q1444 ;
+        oont:history           "Bouwers\n1. Peter Gerritsz\n2. Cornelis Gerritsz\n\nJaren van oplevering\n1. 1479\n2. 1547\n\nOorspronkelijke locatie Utrecht, Nicolaikerk\n\nDispositie in 1479 (vermoedelijk)\n\n@Hoofdwerk\n\nBlokwerk*@\n@\n\n8'@\n\n@Bovenwerk\n\nPrincipaal d\n(Cimbel?)\nPositie@\n@\n\n4'\n\n@\n@Pedaal\n\nBourdonnen@\n@\n\n8'+4' tr@\n\n* 7-18 st.\n\n#manuaalomvang HW H1CD-f2, BW Hcd-f2\npedaalomvang F-e#\n\nGerrit Petersz 1508\n.klaviatuur gewijzigd\n\nCornelis Gerritsz 1547\n.bouw rugpositief met Prestant 8', Quintadeen 8', Octaaf 4', Fluit 2', Mixtuur 3-5 st., Toesijn 8' en Schalmei 8'\n.dispositiewijziging:\nBW + Holpijp 8', + Openfluit 4', + Nasard 2 2/3', + Gemshoorn 2', + Sifflet 1', + Trompet 8'\nPed 'bourdonnen'octaaf verwijderd\n.stemming gewijzigd\n.vlakke middenveld vervangen door toren, frontpijpen verschoven\n\nDirck Petersz en Jacob Jansz van Lin 1603\n.verbouwing\n.Ped + Trompet 8'\n\nGaltus van Hagerbeer 1624\n.uitgebreid herstelwerk\n\nEmanuel Frederick van Montfoort 1686\n.RP + Sesquialter\n\nJohan Nicolas Heerman\n.blokwerk gewijzigd\n.koppeling Ped-blokwerk aangebracht\n.oude balgen vervangen door vier balgen afkomstig uit Mariakerk, Utrecht\n\nChristian Müller 1733\n.nieuwe klaviatuur\n.afsluiter voor het oorspronkelijke hoofdwerk aangebracht\n\nvóór 1759\n.dispositiewijziging:\nRP - Fluit\nBW - Tertiaan 1 3/5'\n\nMaarschalkerweerd & Zn 1886\n.orgel overgeplaatst naar Rijksmuseum te Amsterdam\n.balgen verdwenen\n\n1956\n.kas met frontpijpen overgeplaatst naar Koorkerk te Middelburg\n.overige delen opgeslagen in rijksbunker" ;
+        oont:monument          "Koorkerk" ;
+        oont:monumentNumber    "28671" ;
+        oont:moreInformation   "Jan van Biezen, Het Nederlandse orgel in de renaissance en de barok, in het bijzonder de school van Jan van Covelens. Utrecht 1995, 708-730.\nHans Brink, Rob van der Hilst, Paul Peeters, 'Reconstructie of copiëren'. Criteria met betrekking tot de overbrenging, 'restauratie' en plaatsing van het voormalige orgel van de Nicolaïkerk te Utrecht. Het Orgel, 78 (1982), 136-139.\nPaul Peeters, 'Die Ehemalige Orgel der Nikolaikirche in Utrecht. Restaurieren oder kopieren?'. Acta Organologica, 22 (1991), 391-408." ;
+        oont:name              "Middelburg, Koorkerk" ;
+        oont:organNumber       "971" ;
+        oont:particularities   "Dit orgel behield veel van z'n 15e- en 16e-eeuwse bestanddelen. Van Peter Gerritsz resteren de hoofdkas, de blokwerklade en de wellenborden van hoofd- en bovenwerk. De binnenpijpen en (tinnen) frontpijpen van het blokwerk zijn eveneens van zijn hand. Van Cornelis Gerritsz zijn nog aanwezig de springladen van het bovenwerk en de sleepladen van het rugpositief, het wellenbord van het rugwerk en de registermechaniek van rugpositief en bovenwerk. Het grootste deel van het thans nog aanwezige pijpwerk werd door hem vervaardigd. Daaronder bevinden zich ook de frontpijpen van rugpositief en bovenwerk. Waarschijnlijk is de pedaallade met de de Trompet 8' van Dirck Petersz de Swart en Jacob Jansz van Lin. De loden frontpijpen werden vermoedelijk gemaakt door Galtus van Hagerbeer in 1624. De klaviatuur is van Christian Müller." ;
+        oont:state             "Middelburg" .
+
+wd:Q1444  wd:Property:P1343  wd:Q106727050 , wd:Q302556 ;
+        wd:Property:P1535  wd:Q765778 ;
+        wd:Property:P1709  <https://dbpedia.org/ontology/Organ> ;
+        wd:Property:P1889  wd:Q281460 ;
+        wd:Property:P2579  wd:Q11163731 ;
+        wd:Property:P279   wd:Q19603939 , wd:Q52954 ;
+        wd:Property:P3095  wd:Q1495811 ;
+        wd:Property:P366   wd:Q60733114 , wd:Q9730 ;
+        wd:Property:P527   wd:Q2927648 , wd:Q1446290 , wd:Q901207 , wd:Q25112583 , wd:Q1510738 , wd:Q392573 , wd:Q1758965 .
+
+"niet vast te stellen"
+        oont:extraInformation  <https://organhistoricalsociety.org/OrganHistory/works/works06.htm> .
+
+"oorspronkelijk ca een kwart lager dan a1 = 440 Hz, nu a1 = 466 Hz"
+        oont:extraInformation  <https://organhistoricalsociety.org/OrganHistory/works/works04.htm> .
+
+"Middelburg"  oont:extraInformation  <https://nl.wikipedia.org/wiki/Middelburg> .

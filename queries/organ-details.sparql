@@ -6,8 +6,6 @@ PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
 PREFIX oont: <http://w3id.org/polifonia/ontology/organs/>
 PREFIX wd: <https://www.wikidata.org/wiki/> 
 
-# evaluate using size of files, no. service calls, files queried. 
-
 CONSTRUCT
   {
 	?organ a oont:Organ ;
@@ -44,18 +42,15 @@ CONSTRUCT
 	?change oont:AdditionalSpecification ?changeDescription . 
 	?change oont:Builder ?maintainer .
 
-	# custom info 
 	?building oont:extraInformation ?buildingInfo .
 	?state oont:extraInformation ?stateInfo .
 	?maintainer oont:extraInformation ?maintainerInfo .
 
-	# generic info
 	?pitch oont:extraInformation ?pitchInfo .
 	?windPressure oont:extraInformation ?windPressureInfo .
 	?windSystem oont:extraInformation ?windPressureInfo .
 	?divisionName oont:extraInformation ?divisionInfo .
 
-	# Musicbrainz
 	?organ rdfs:subClassOf ?barrelOrgan .
 	?organ rdfs:subClassOf ?electricOrgan .
 	?organ rdfs:subClassOf ?pipeOrgan .
@@ -66,7 +61,6 @@ CONSTRUCT
 	?reedOrgan oont:locationImage ?reedOrganImage .
 	?organ oont:extraInformation ?organWikidata .
 
-	# Wikidata
 	?organWikidata wd:Property:P279 ?keyboardInstrument .
 	?organWikidata wd:Property:P279 ?buildingComponent .
 	?organWikidata wd:Property:P2579 ?organology .
@@ -397,7 +391,6 @@ WHERE
 			rdf:_1 ?moreInformation ; 
 	}
 
-	# Musicbrainz
 	BIND(wd:Q752638 AS ?barrelOrgan) .
 	BIND(wd:Q1327327 AS ?electricOrgan) .
 	BIND(wd:Q281460 AS ?pipeOrgan) .
@@ -407,7 +400,6 @@ WHERE
 	BIND(wd:Q173453 AS ?windInstrument) .
 	BIND(wd:Q1444 AS ?organWikidata) .
 
-	# Wikidata
 	BIND(wd:Q52954 AS ?keyboardInstrument) .
 	BIND(wd:Q19603939 AS ?buildingComponent) .
 	BIND(wd:Q11163731 AS ?organology) .

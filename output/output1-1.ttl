@@ -1,0 +1,71 @@
+@prefix fx:   <http://sparql.xyz/facade-x/ns/> .
+@prefix oont: <http://w3id.org/polifonia/ontology/organs/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd:   <https://www.wikidata.org/wiki/> .
+@prefix xyz:  <http://sparql.xyz/facade-x/data/> .
+
+""      xyz:divisionName              "Hoofdwerk (I)" ;
+        oont:AdditionalSpecification  "8'" ;
+        oont:extraInformation         <https://nl.wikipedia.org/wiki/> ;
+        oont:partition                "" .
+
+wd:Q12460259  oont:locationImage  <https://staticbrainz.org/irombook/reed_organ/reed_organ.png> .
+
+"Hoofdwerk (I)"  oont:extraInformation  <https://organhistoricalsociety.org/OrganHistory/works/works05.htm> .
+
+"Gereformeerde Kerk Vrijgemaakt"
+        oont:extraInformation  <https://nl.wikipedia.org/wiki/Gereformeerde_Kerk_Vrijgemaakt> .
+
+"74 mm"  oont:extraInformation  <https://organhistoricalsociety.org/OrganHistory/works/works06.htm> .
+
+"twee regulateurs"  oont:extraInformation
+                <https://organhistoricalsociety.org/OrganHistory/works/works06.htm> .
+
+"a1 = 440 Hz"  oont:extraInformation  <https://organhistoricalsociety.org/OrganHistory/works/works04.htm> .
+
+"Brouwershaven"  oont:extraInformation  <https://nl.wikipedia.org/wiki/Brouwershaven> .
+
+"Part14_000Brouwershaven"
+        rdf:type               oont:Organ , wd:Q173453 ;
+        rdfs:subClassOf        wd:Q12460259 , wd:Q1327327 , wd:Q281460 , wd:Q752638 ;
+        xyz:change             "orgel buiten gebruik gesteld" ;
+        xyz:disposition        "" ;
+        xyz:technicals         "Werkindeling\nhoofdwerk, nevenwerk, pedaal\n\nDispositie\n\nTABLE:3\n\n\nWerktuiglijke registers\nkoppelingen HW-NW, Ped-HW, Ped-NW\ntremulant\n\nSamenstelling vulstem\n\nTABLE:5\n\n\nToonhoogte\na1 = 440 Hz\nTemperatuur\nevenredig zwevend\n\nManuaalomvang\nC-f3\nPedaalomvang\nC-d1\n\nWindvoorziening\ntwee regulateurs\nWinddruk\n74 mm\n\nPlaats klaviatuur\nachterzijde" ;
+        oont:builder           "A.S.J. Dekker" ;
+        oont:consolelocation   "" ;
+        oont:creator           "Een vijfdelig front met spitse zijtorens, een halfronde middentoren en relatief brede tussenvelden op verhoogde pijpstok. Aan bovenzijde lopen de pijpvelden schuin op naar de middentoren, waarbij de gebogen lijn aan het einde wordt afgesloten met een knop. Het pijpwerk is aan boven- en onderzijde geblindeerd, met vormen die doen denken aan de contour van een liggende C-voluut. Bij de blinderingen van de torens zijn fraaie accenten aangebracht. Onder lopen de blinderingen uit in een smalle punt in midden, boven in een hangende lelie. De torens zijn bekroond met koepels met daarop een bol, waarbij de koepels worden geflankeerd door kleine obelisken op sokkels. De vleugelstukken zijn samengesteld uit een S-voluut met krullen en onder andere twee hoorns. Bij het oorspronkelijke ontwerp maakte de onderkas zeer waarschijnlijk deel uit van een doorlopend balkon in dezelfde vormentaal, zoals te zien is bij het vrijwel identieke Dekkerorgel te Simonshaven.)" ;
+        oont:dateOfBirth       "1910" ;
+        oont:extraInformation  wd:Q1444 ;
+        oont:history           "Bouwers\n1. A.S.J. Dekker\n2. H.J. Vierdag\n\nJaren van oplevering\n1. 1910\n2. 1978\n\nDispositie 1910\n\nTABLE:1\n\n\noctaafkoppel\naangehangen pedaal\n\n1970\n.orgel buiten gebruik gesteld\n\nH.J. Vierdag 1978\n.nieuw orgel in oude kas met gebruikmaking van enig oud pijpwerk" ;
+        oont:monument          "Gereformeerde Kerk Vrijgemaakt" ;
+        oont:monumentNumber    "" ;
+        oont:moreInformation   "Victor Timmer & Ton van Eck, ‘Twee werklijsten van orgelmakers uit de eerste helft van de 20ste eeuw. De firma A.S.J. Dekker en de door haar overgenomen ‘Orgelfabriek P. van Dam’. Het Orgel, 101/3 (2005), 27." ;
+        oont:name              "Brouwershaven, Gereformeerde Kerk Vrijgemaakt" ;
+        oont:organNumber       "" ;
+        oont:particularities   "De firma A.S.J. Dekker leverde in maart 1910 een nieuw pneumatisch orgel op in de (toen nog) Gereformeerde Kerk van Brouwershaven. Van dit instrument resteert naast de orgelkas nog pijpwerk in de registers Prestant 8' en Octaaf 4' (HW), alsmede Holpijp 8' en Fluit 4' (NW).\nVan de Prestant 8' staan C-b in het front en h-f3 op de lade; alle binnenpijpen met expressions. De Octaaf 4' dateert van C-f2 uit 1910 (met expressions) de overige pijpen zijn in 1978 vernieuwd. De Fluit 4' (NW) is van C-f2 van metaal (gedekt, 1910), het vervolg is open, conisch (1978)." ;
+        oont:state             "Brouwershaven" .
+
+wd:Q1444  wd:Property:P1343  wd:Q106727050 , wd:Q302556 ;
+        wd:Property:P1535  wd:Q765778 ;
+        wd:Property:P1709  <https://dbpedia.org/ontology/Organ> ;
+        wd:Property:P1889  wd:Q281460 ;
+        wd:Property:P2579  wd:Q11163731 ;
+        wd:Property:P279   wd:Q19603939 , wd:Q52954 ;
+        wd:Property:P3095  wd:Q1495811 ;
+        wd:Property:P366   wd:Q60733114 , wd:Q9730 ;
+        wd:Property:P527   wd:Q2927648 , wd:Q1446290 , wd:Q901207 , wd:Q25112583 , wd:Q1510738 , wd:Q392573 , wd:Q1758965 .
+
+"Werkindeling\nhoofdwerk, nevenwerk, pedaal\n\nDispositie\n\nTABLE:3\n\n\nWerktuiglijke registers\nkoppelingen HW-NW, Ped-HW, Ped-NW\ntremulant\n\nSamenstelling vulstem\n\nTABLE:5\n\n\nToonhoogte\na1 = 440 Hz\nTemperatuur\nevenredig zwevend\n\nManuaalomvang\nC-f3\nPedaalomvang\nC-d1\n\nWindvoorziening\ntwee regulateurs\nWinddruk\n74 mm\n\nPlaats klaviatuur\nachterzijde"
+        oont:keyboardRange      "C-f3" ;
+        oont:pedalRange         "C-d1" ;
+        oont:pitch              "a1 = 440 Hz" ;
+        oont:systemPlayingAids  "koppelingen HW-NW, Ped-HW, Ped-NW\ntremulant" ;
+        oont:temperature        "evenredig zwevend" ;
+        oont:windPressure       "74 mm" ;
+        oont:windSystem         "twee regulateurs" .
+
+"orgel buiten gebruik gesteld"
+        oont:AdditionalSpecification  "1970" ;
+        oont:Builder                  "" ;
+        oont:date                     "1970" .

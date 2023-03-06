@@ -1,0 +1,72 @@
+@prefix fx:   <http://sparql.xyz/facade-x/ns/> .
+@prefix oont: <http://w3id.org/polifonia/ontology/organs/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd:   <https://www.wikidata.org/wiki/> .
+@prefix xyz:  <http://sparql.xyz/facade-x/data/> .
+
+""      xyz:divisionName              "Manuaal" ;
+        oont:AdditionalSpecification  "8'" ;
+        oont:partition                "B/D" .
+
+wd:Q12460259  oont:locationImage  <https://staticbrainz.org/irombook/reed_organ/reed_organ.png> .
+
+"Folsgare (Folsgeare)"
+        oont:extraInformation  <https://nl.wikipedia.org/wiki/Folsgare_(Folsgeare)> .
+
+"a1 = 432 Hz"  oont:extraInformation  <https://organhistoricalsociety.org/OrganHistory/works/works04.htm> .
+
+"Manuaal"  oont:extraInformation  <https://organhistoricalsociety.org/OrganHistory/works/works05.htm> .
+
+"orgel overgeplaatst naar nieuw kerkgebouw"
+        oont:AdditionalSpecification  "Bakker & Timmenga 1924" ;
+        oont:Builder                  "Bakker & Timmenga" ;
+        oont:date                     "1924" .
+
+"Werkindeling\nmanuaal, aangehangen pedaal\n\nDispositie\n\nTABLE:1\n\n\nWerktuiglijk register\ntremulant\n\nSamenstelling vulstem\n\nTABLE:3\n\n\nToonhoogte\na1 = 432 Hz\nTemperatuur\nevenredig zwevend\n\nManuaalomvang\nC-f3\nPedaalomvang\nC-d1\n\nWindvoorziening\nmagazijnbalg\nWinddruk\n62 mm\n\nPlaats klaviatuur\nlinkerzijde"
+        oont:keyboardRange      "C-f3" ;
+        oont:pedalRange         "C-d1" ;
+        oont:pitch              "a1 = 432 Hz" ;
+        oont:systemPlayingAids  "tremulant" ;
+        oont:temperature        "evenredig zwevend" ;
+        oont:windPressure       "62 mm" ;
+        oont:windSystem         "magazijnbalg" .
+
+"Hervormde Kerk"  oont:extraInformation
+                <https://nl.wikipedia.org/wiki/Hervormde_Kerk> .
+
+"magazijnbalg"  oont:extraInformation  <https://organhistoricalsociety.org/OrganHistory/works/works06.htm> .
+
+"62 mm"  oont:extraInformation  <https://organhistoricalsociety.org/OrganHistory/works/works06.htm> .
+
+wd:Q1444  wd:Property:P1343  wd:Q106727050 , wd:Q302556 ;
+        wd:Property:P1535  wd:Q765778 ;
+        wd:Property:P1709  <https://dbpedia.org/ontology/Organ> ;
+        wd:Property:P1889  wd:Q281460 ;
+        wd:Property:P2579  wd:Q11163731 ;
+        wd:Property:P279   wd:Q19603939 , wd:Q52954 ;
+        wd:Property:P3095  wd:Q1495811 ;
+        wd:Property:P366   wd:Q60733114 , wd:Q9730 ;
+        wd:Property:P527   wd:Q2927648 , wd:Q1446290 , wd:Q901207 , wd:Q25112583 , wd:Q1510738 , wd:Q392573 , wd:Q1758965 .
+
+"Bakker & Timmenga"  oont:extraInformation
+                <https://nl.wikipedia.org/wiki/Bakker_&_Timmenga> .
+
+"Part14_000Folsgare"  rdf:type  oont:Organ , wd:Q173453 ;
+        rdfs:subClassOf        wd:Q752638 , wd:Q1327327 , wd:Q281460 , wd:Q12460259 ;
+        xyz:change             "orgel overgeplaatst naar nieuw kerkgebouw" ;
+        xyz:disposition        "" ;
+        xyz:technicals         "Werkindeling\nmanuaal, aangehangen pedaal\n\nDispositie\n\nTABLE:1\n\n\nWerktuiglijk register\ntremulant\n\nSamenstelling vulstem\n\nTABLE:3\n\n\nToonhoogte\na1 = 432 Hz\nTemperatuur\nevenredig zwevend\n\nManuaalomvang\nC-f3\nPedaalomvang\nC-d1\n\nWindvoorziening\nmagazijnbalg\nWinddruk\n62 mm\n\nPlaats klaviatuur\nlinkerzijde" ;
+        oont:builder           "Bakker & Timmenga" ;
+        oont:consolelocation   "Marrum, Gereformeerde Kerk" ;
+        oont:creator           "Een acht-voets variant van het bekende Bakker & Timmenga-front dat in 1894 voor het eerst in het oeuvre van deze orgelmakers verscheen. De grotere breedtemaat is ontstaan door de maten van de grotere frontpijpen en de plaatsing van negen pijpen in de velden. Hierdoor kon een volledige Bourdon 16' worden gedisponeerd. De velden zijn vlak uitgevoerd, gescheiden door een brede lijst met licht gebogen onderkant, het labiumverloop van de veldpijpen is parallel.\nDe ornamenten volgen het voor dit fronttype vaste patroon: plantaardige motieven in de blinderingen, acanthusmotieven in de culs-de-lampe, opengewerkte opzetstukken op de torenkappen, waarbij de middentoren tevens een lier draagt.\nDe vleugelstukken vertonen de bekende compositie van S- en C-voluutbanden, omrankt met wijnrank en vogeltje. Opmerkelijk is het kleurverschil tussen blinderingen en culs-de-lampe enerzijds en opzetstukken met vleugels anderzijds." ;
+        oont:dateOfBirth       "1908" ;
+        oont:extraInformation  wd:Q1444 ;
+        oont:history           "Bouwer\nBakker & Timmenga\n\nJaar van oplevering\n1908\n\nOorspronkelijke locatie\nMarrum, Gereformeerde Kerk\n\nBakker & Timmenga 1924\n.orgel overgeplaatst naar nieuw kerkgebouw\n.Holpijp van nieuwe hoeden voorzien\n\nBakker & Timmenga 1926\n.registerknoppen verplaatst\n.+ Trompet 8' (inclusief sleep, stok en registermechaniek) op daarvoor gereserveerde plaats\n\nBakker & Timmenga 1934\n.tremulant toegevoegd\n\nBakker & Timmenga 1935\n.stoppen houten pijpen van viltpakkingen voorzien\n\nOrgelmakerij Ernst Leeflang 1964\n.orgel overgeplaatst naar Folsgare, Hervormde Kerk\n.pedaalklavier vernieuwd\n.nieuwe, kleinere magazijnbalg aangebracht\n.- Cornet D 3 st., + Mixtuur 2-3 st." ;
+        oont:monument          "Hervormde Kerk" ;
+        oont:monumentNumber    "39762" ;
+        oont:moreInformation   "Jan Jongepier, Vijf eeuwen Friese orgelbouw. Leeuwarden, 2004, 186.\n\nNiet gepubliceerde bron\nArchief Orgelmakerij Bakker & Timmenga, Leeuwarden, HCL." ;
+        oont:name              "Folsgare (Folsgeare), Hervormde Kerk" ;
+        oont:organNumber       "264" ;
+        oont:particularities   "Deling B/D Bourdon 16' tussen H en c.\nDe frontpijpen zijn van metaal met een hoog tingehalte. Sprekend (Prestant 8' vanaf C) zijn de drie torens en in de onderste tussenvelden aan weerskanten de eerste vier, (C-kant) respectievelijk vijf (Cis-kant) pijpen, gerekend vanaf de middentoren.\nHet handklavier is een eiken staartklavier met celluloidbeleg op de ondertoetsen. De verplaatste registerknoppen dateren (behalve die van de tremulant) nog uit 1908. Aan de binnenzijde van de kas zijn de oorspronkelijke registergaten boven de lessenaar nog zichtbaar. Het pedaalklavier heeft vanuit het midden naar buiten toe boventoetsen van oplopende lengte. Het oorspronkelijk pedaalklavier had een omvang van C-g. De in 1964 geleverde registerknop voor de Mixtuur is een knop van Witte met als opschrift Mixtuur 2 vt, en is naar alle waarschijnlijkheid afkomstig van het Witte orgel in de Gereformeerde Kerk te Anjum (oorspronkelijk Utrecht, Remonstrantse kerk, 1866 en kort voor 1964 door Leeflang gemoderniseerd en gewijzigd).\nDe balg ligt in de onderkas, de windmachine is op die plaats naast de balg opgesteld. Oorspronkelijk bezat de magazijnbalg met schepbalgen een handpomp die in klampen tegen de achterwand was aangebracht. De openingen voor de hefbomen en het windzicht zijn dichtgezet. De schuif voor het ventiel, op een voorslag gemonteerd, is er nog, maar dient nu de pneumatische bediening van de tremulant. Het bestek van l908 vermeldt een winddruk van 75 mm.\nDe windlade is van eiken, maar stokken en roosters zijn van mahonie. De ventielkast heeft drie opliggende, vastgeschroefde voorslagen. De cancelvolgorde is: fis d B Fis c e gis / e3 (hele tonen) b / Fis E D C Cis Dis F / a (hele tonen) f3 / g dis H Gis A cis f. (f aan klavierzijde).\nHouten pijpen van Amerikaans grenen zijn toegepast voor de Bourdon 16' (C-h, waarvan C-G tegen de rechter zijkant opgesteld en voorzien van voorbaarden) en de Holpijp 8' (C-H). De Viola di Gamba 8' is van C-H gecombineerd met de Holpijp en verder van tin. De Fluit 4' is gedekt, het hoogste octaaf is echter open, conisch.\nDe Trompet 8' heeft zinken stevels en zinken bekers. Alle inscripties zijn met slagletters uitgevoerd, de registernaam luidt Trompete. De koppen zijn van lood. Alle bekers zijn van slitsen voorzien.\nAl het metalen binnenpijpwerk is toegeleverd materiaal. Het merendeel hiervan heeft geperste labia. Het pijpwerk van de Holpijp heeft spits geritste labia en pijpwanden die door hun speciale structuur als spotted worden aangeduid. Expressions zijn toegepast bij alle pijpen van Prestant en Viola di Gamba, bij de Octaaf 4' (C-f2) en bij de Octaaf 2' (C-cis1)." ;
+        oont:state             "Folsgare (Folsgeare)" .

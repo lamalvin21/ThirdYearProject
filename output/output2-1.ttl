@@ -1,0 +1,72 @@
+@prefix fx:   <http://sparql.xyz/facade-x/ns/> .
+@prefix oont: <http://w3id.org/polifonia/ontology/organs/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd:   <https://www.wikidata.org/wiki/> .
+@prefix xyz:  <http://sparql.xyz/facade-x/data/> .
+
+""      xyz:divisionName              "Manuaal" ;
+        oont:AdditionalSpecification  "16" ;
+        oont:partition                "" .
+
+wd:Q12460259  oont:locationImage  <https://staticbrainz.org/irombook/reed_organ/reed_organ.png> .
+
+"a1 = 435 Hz"  oont:extraInformation  <https://organhistoricalsociety.org/OrganHistory/works/works04.htm> .
+
+"Gereformeerde Kerk Vrijgemaakt"
+        oont:extraInformation  <https://nl.wikipedia.org/wiki/Gereformeerde_Kerk_Vrijgemaakt> .
+
+"Werkindeling\nmanuaal, aangehangen pedaal\n\nDispositie\n\nTABLE:1\n\n\nWerktuiglijke registers\nknop voor inschakelen C-H Bourdon 16'\ntremulant\n\n\nSamenstelling vulstem\nCornet   c1   8 - 4 - 2 2/3 - 2 - 1 3/5\n\nToonhoogte\na1 = 435 Hz\nTemperatuur\nevenredig zwevend\n\nManuaalomvang\nC-f3\nPedaalomvang\nC-c1\n\nWindvoorziening\nmagazijnbalg met inspringende vouw, twee schepbalgen en handpomp (1907)\nWinddruk\n65 mm\n\nPlaats klaviatuur\nrechterzijde"
+        oont:keyboardRange      "C-f3" ;
+        oont:pedalRange         "C-c1" ;
+        oont:pitch              "a1 = 435 Hz" ;
+        oont:systemPlayingAids  "knop voor inschakelen C-H Bourdon 16'\ntremulant" ;
+        oont:temperature        "evenredig zwevend" ;
+        oont:windPressure       "65 mm" ;
+        oont:windSystem         "magazijnbalg met inspringende vouw, twee schepbalgen en handpomp (1907)" .
+
+"Niezijl"  oont:extraInformation  <https://nl.wikipedia.org/wiki/Niezijl> .
+
+"Part14_000Niezijl"  rdf:type  wd:Q173453 , oont:Organ ;
+        rdfs:subClassOf        wd:Q12460259 , wd:Q1327327 , wd:Q281460 , wd:Q752638 ;
+        xyz:change             "herstel" ;
+        xyz:disposition        "" ;
+        xyz:technicals         "Werkindeling\nmanuaal, aangehangen pedaal\n\nDispositie\n\nTABLE:1\n\n\nWerktuiglijke registers\nknop voor inschakelen C-H Bourdon 16'\ntremulant\n\n\nSamenstelling vulstem\nCornet   c1   8 - 4 - 2 2/3 - 2 - 1 3/5\n\nToonhoogte\na1 = 435 Hz\nTemperatuur\nevenredig zwevend\n\nManuaalomvang\nC-f3\nPedaalomvang\nC-c1\n\nWindvoorziening\nmagazijnbalg met inspringende vouw, twee schepbalgen en handpomp (1907)\nWinddruk\n65 mm\n\nPlaats klaviatuur\nrechterzijde" ;
+        oont:builder           "M. Eertman" ;
+        oont:consolelocation   "" ;
+        oont:creator           "Dit front is nagenoeg identiek aan dat te Ten Boer (Gereformeerde Kerk 1907). Er zijn slechts enkele verschillen in de decoratie. Zo ontbreken hier de ornamenten onder de torens en de opstaande bladvoluten tegen de middelste torenkap. De torenbekroningen zijn anders en bestaan hier uit een lier en twee geoorde vazen. De vleugelstukken zijn opgebouwd uit een samenstel van S- en C-vormige bladvoluten, waartussen deze keer geen trofee van muziekinstrumenten is opgenomen." ;
+        oont:dateOfBirth       "1907" ;
+        oont:extraInformation  wd:Q1444 ;
+        oont:history           "Bouwer\nM. Eertman\n\nJaar van oplevering\n1907\n\nHoltman & Leemshuis 1947\n.herstel\n\nHoltman & Leemhuis 1959\n.herstel\n\nJ.J. Harkema 1968\n.orgel gewijzigd\n.nieuw handklavier; registerknoppen verplaatst\n.Salicionaal 8' ◂ Quint 3'; bas Bourdon 16' op pneumatische lade geplaatst\n\n1972\n.orgel ernstig beschadigd door lekkage en vervolgens buiten gebruik gesteld\n\n1977\n.orgelkas opnieuw geschilderd\n\nGebr. Reil 1983\n.restauratie\n.tremulant toegevoegd\n.mechanieken gerestaureerd; nieuwe registerknoppen aangebracht\n.windlade gerestaureerd; sleep Trompet 8' gedeeld, Bourdon 16' van twee standen voorzien\n.bas Bourdon 16' weer op lade Man geplaatst; Quint 3' vervangen\n\nF.R. Feenstra 1996\n.windvoorziening gerestaureerd" ;
+        oont:monument          "Gereformeerde Kerk Vrijgemaakt" ;
+        oont:monumentNumber    "" ;
+        oont:moreInformation   "Het Groninger Orgelbezit van Adorp tot Zijldijk. 2 Westerkwartier, Groningen (1995), 126-127.\nDe Mixtuur, 42 (1983), 488." ;
+        oont:name              "Niezijl, Gereformeerde Kerk Vrijgemaakt" ;
+        oont:organNumber       "1065" ;
+        oont:particularities   "Deling B/D tussen h en c1.\nDe orgelkas is sinds 1977 geschilderd in een houtimitatie, voorheen was de kas wit. Het dak van de kas is vlak en heeft in het midden een afdekking met gasdoek, waar normaal de behuizing achter de kap van de middentoren zou zitten. De bovenste tussenvelden bevatten stomme zinken pijpen, op lengte afgesneden.\nDe magazijnbalg ligt links naast het orgel. De schepbalgen en handpomp zijn in 1996 verwijderd. De tremulant is pneumatisch.\nDe registerknoppen bevinden zich vlak onder de lessenaarbak; de trekstokken zijn rond. Rechts boven de lessenaarbak zijn aan de binnenzijde van de kas vier ronde gedichte gaten zichtbaar met dezelfde maat als die van de gewone registertrekkers; zijn dit sporen van een vroegere vrije combinatie of van een nooit geplaatst bovenwerk?\nBoven de knop van de Bourdon bevindt zich een houten palletje waarmee het mogelijk is dit register in- of uit te schakelen.\nHet pijpwerk staat op een laagliggende C- en Cislade. In het midden staan - van achteren gezien - [als we de deling in twee laden wegdenken] C-A in hele tonen naar weerszijden aflopend; aan de uiteinden van de lade B-h en de discant daar tussenin. Beide laden hebben twee eiken opliggende voorslagen, elk vastgezet met twee voorslagijzers. Tussen laden en vloer ligt een eiken walsraam met veelhoekige grenen walsen en metalen walsarmpjes.\nHet meeste metalen pijpwerk heeft geperste labia en expressions. De Prestant 8' staat van C-g1 in het front (torens en onderste tussenvelden, zink), het vervolg staat op de lade, metaal. De Bourdon 16' is geheel van hout (geverfd), deels afgevoerd. C-B van de Roerfluit 8' zijn van hout met doorboorde stoppen, h-f3 metaal, gedekt met inwendige roeren. C-H van de Gamba 8' zijn van zink, het vervolg is van orgelmetaal. De Octaaf 4' bestaat uit ouder pijpwerk (spitsboog gedrukt bovenlabium); C-f1 met expressions, het vervolg is op lengte afgesneden. De Quint 3' is geheel van metaal. De Flûte Travers 4' is geheel metaal, open. Het acht-voets koor van de Cornet is gedekt, met ronde houten stoppen en handvatten; alleen de kleinste pijpjes van het 1 3/5-voets koor zijn op lengte afgesneden. De Gemshoorn 2' is van metaal, licht conisch; alleen de kleinste 12 zijn op lengte afgesneden. De Trompet 8' heeft zinken stevels en bekers voor C-H (met intonatie uitsnijdingen); het vervolg is van metaal. C-d1 hebben versterkte onderkant bekers. Benaming bas op de betreffende registerknop als basc." ;
+        oont:state             "Niezijl" .
+
+"Manuaal"  oont:extraInformation  <https://organhistoricalsociety.org/OrganHistory/works/works05.htm> .
+
+"65 mm"  oont:extraInformation  <https://organhistoricalsociety.org/OrganHistory/works/works06.htm> .
+
+"herstel"  oont:AdditionalSpecification
+                "Holtman & Leemshuis 1947" ;
+        oont:Builder                  "Holtman & Leemshuis" ;
+        oont:date                     "1947" .
+
+"magazijnbalg met inspringende vouw, twee schepbalgen en handpomp (1907)"
+        oont:extraInformation  <https://organhistoricalsociety.org/OrganHistory/works/works06.htm> .
+
+"Holtman & Leemshuis"
+        oont:extraInformation  <https://nl.wikipedia.org/wiki/Holtman_&_Leemshuis> .
+
+wd:Q1444  wd:Property:P1343  wd:Q106727050 , wd:Q302556 ;
+        wd:Property:P1535  wd:Q765778 ;
+        wd:Property:P1709  <https://dbpedia.org/ontology/Organ> ;
+        wd:Property:P1889  wd:Q281460 ;
+        wd:Property:P2579  wd:Q11163731 ;
+        wd:Property:P279   wd:Q19603939 , wd:Q52954 ;
+        wd:Property:P3095  wd:Q1495811 ;
+        wd:Property:P366   wd:Q60733114 , wd:Q9730 ;
+        wd:Property:P527   wd:Q2927648 , wd:Q1446290 , wd:Q901207 , wd:Q25112583 , wd:Q1510738 , wd:Q392573 , wd:Q1758965 .
