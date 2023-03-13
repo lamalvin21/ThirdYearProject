@@ -21,7 +21,7 @@ credits:
 ---
 # ORGANS Knowledge Graph
 ## Abstract
-The knowledge graph contains information regarding a specified organ passed in through command line. Entities include the organ's parthood, history and external information. 
+The knowledge graph contains information regarding a specified organ passed in through command line. Entities include the organ's parthood, history and external information. Data regarding the organ has been collected from the dataset as well as external links such as Wikidata and MusicBrainz. The dataset itself is derived from a Dutch organ encyclopedia. The goal of the knowledge graph is to display extensive amounts of data on a particular organ in the dataset. 
 
 ## SPARQL Anything query
 
