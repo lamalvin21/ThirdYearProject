@@ -19,7 +19,9 @@ credits:
 - https://github.com/enridaga
 - https://github.com/Eline-Duijsens
 ---
-# ORGANS Dataset
+# ORGANS Knowledge Graph
+## Abstract
+The knowledge graph contains information regarding a specified organ passed in through command line. Entities include the organ's parthood, history and external information. 
 
 ## SPARQL Anything query
 
