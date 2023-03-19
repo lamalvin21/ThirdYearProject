@@ -274,7 +274,9 @@ WHERE
 			fx:json.path.1 ?organDescription ; .
 
 		[] a fx:root; 
-			rdf:_1 ?disposition ;
+			rdf:_1 ?disposition1 ; .
+
+		BIND(IF(?disposition1 = "", "disposition" , ?disposition1) AS ?disposition)
 	} 
 	SERVICE <x-sparql-anything:file:./output/dispositions.json>
 	{
