@@ -31,7 +31,7 @@ Execution of this software requires installation of [java](https://www.oracle.co
 java -jar sparql-anything-0.8.1.jar -q queries/organ-details.sparql --values organ=Part01_001MIDDE --output output/output.ttl
 ```
 (can select any organ from output/organids.json)
-3. View resulting knowledge graph in output.ttl in output folder. 
+\\ 3. View resulting knowledge graph in output.ttl in output folder. 
 
 ## SPARQL Anything query
 
