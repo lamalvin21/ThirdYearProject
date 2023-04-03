@@ -27,10 +27,12 @@ Put code of any organ in the --values parameter
 fx -q queries/organ-details.sparql --values organ=Part01_001MIDDE
 ```
 
-## Others 
+## Credits 
 
 Resources [ontology](https://github.com/polifonia-project/organs-ontology) and [dataset](https://github.com/polifonia-project/organs-dataset) (also in output folder) are from the [Polifonia project](https://github.com/polifonia-project). 
 
 Credit for the provided resources include: [Enrico Daga](https://github.com/enridaga), [Peter van Kranenburg](https://github.com/pvankranenburg), [Eline Duijsens](https://github.com/ElineDuijsens), [Eoin Kearns](https://github.com/EoinKearns), [Fiorela Ciroku](https://github.com/FiorelaCiroku) and [roccotrip](https://github.com/roccotrip).
 
-Contributions and use of repository are welcome. 
+## License
+
+Contributions and use of repository are welcome. This project is under [MIT License](https://github.com/lamalvin21/ThirdYearProject/blob/main/LICENSE).
